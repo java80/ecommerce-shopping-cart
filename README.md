@@ -11,7 +11,7 @@ The name of your project.
 
 In this project,a fully functional e-commerce web application will be built in React JS, using https://airtable.com/api api design.
 In the backend, the E-commerce administrator will be able to do the following:
-1 Able to add new product with images
+1 Able to add new product with no image
 2 Edit product
 3 Delete product.
 On the the front end, customer/user will be able to do the following:
@@ -80,37 +80,44 @@ Show us a snippet of JSON returned by your Airtable (you can find it under the A
 
 ```json
 {
-  "records": [
-    {
-      "id": "recONRzIUTuZ5lXaF",
-      "fields": {
-        "author": "Liz Yrineo",
-        "setup": "Why did the tomato turn red?",
-        "punchline": "Because it saw the salad dressing!"
-      },
-      "createdTime": "2020-11-30T16:03:09.000Z"
-    },
-    {
-      "id": "rec3oYZ5Tp0AIDsKe",
-      "fields": {
-        "author": "Rachel Moskowitz",
-        "setup": "What did the green grape say to the red grape?",
-        "punchline": "Breathe, idiot, breathe!"
-      },
-      "createdTime": "2020-11-30T16:03:09.000Z"
-    },
-    {
-      "id": "recA34tOaoE1IVeC1",
-      "fields": {
-        "author": "Gary Grant",
-        "setup": "How do you make holy water?",
-        "punchline": "You boil the hell out of it!"
-      },
-      "createdTime": "2020-11-30T16:03:09.000Z"
-    }
-  ],
-  "offset": "recA34tOaoE1IVeC1"
+    "records": [
+        {
+            "id": "recUWgp8y9KdGjiaI",
+            "fields": {
+                "name": "Gold Watch",
+                "category": "Accessory",
+                "description": "Danish design by Jakob Wagner for a timeless look Interchangeable straps for versatility Ethical packaging for a more sustainable tomorrow Dial Colour...",
+                "price": "30",
+                "qauntity": "10"
+            },
+            "createdTime": "2021-03-26T13:10:03.000Z"
+        },
+        {
+            "id": "recNIie1gm7CsH70H",
+            "fields": {
+                "name": "Philosopher - BUNDLE White",
+                "category": "Accessory",
+                "description": "Ethical packaging for a more sustainable tomorrow",
+                "price": "40",
+                "qauntity": "20"
+            },
+            "createdTime": "2021-03-26T13:10:03.000Z"
+        },
+        {
+            "id": "recL5Lclb4v9qWsvs",
+            "fields": {
+                "name": "Womens Gold Rolex Watch 16233",
+                "category": "Accessory",
+                "description": "Rolex Datejust 36MM with a Jubilee Band. You can customize the bezel type between Gold Fluted Bezel or Diamond Bezel",
+                "price": "50",
+                "qauntity": "52"
+            },
+            "createdTime": "2021-03-26T13:10:03.000Z"
+        }
+    ],
+    "offset": "recL5Lclb4v9qWsvs"
 }
+
 ```
 
 ### MVP/PostMVP
@@ -152,16 +159,18 @@ Time frames are also key in the development cycle. You have limited time to code
 
 | Component        | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------- | :------: | :------------: | :-----------: | :---------: |
-| Adding Form      |    H     |      3hrs      |    3.5hrs     |   3.5hrs    |
-| Working with API |    H     |      3hrs      |    2.5hrs     |   2.5hrs    |
-| Total            |    H     |      6hrs      |     5hrs      |    5hrs     |
+| Adding prduct Form      |    H     |      3hrs      |        |       |
+| Working with API |    H     |      3hrs      |        |       |
+| Total            |    H     |      6hrs      |          |        |
 
 ## SWOT Analysis
 
 ### Strengths:
-
+ I can put this together in using react using examples of what we have been doing in the class
 ### Weaknesses:
-
+ UI/styling and positioning of it tags is still a challenge for me
 ### Opportunities:
+A chance for me to play with uploading images
 
 ### Threats:
+I don't see any threats here now
