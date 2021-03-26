@@ -18,28 +18,56 @@ On the the front end, customer/user will be able to do the following:
 1 View list of product in the store
 2 Add product to the shopping cart
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and/or functionality.
 
 ## Wireframes
 
-Home page of the site
-![alt text](http://https://shoppingcart-image.s3.us-east-2.amazonaws.com/Images-for-javascript/homepage.png)
 
-Product information
-![alt text](https://shoppingcart-image.s3.us-east-2.amazonaws.com/Images-for-javascript/Product-description.png
+<table align="center">
+  <tr>
+    <td align="center">Home Page</td>
+    </tr>
+  <tr>
+    <td><img src="Images-for-javascript/homepage.png" width=1080 height=1000></td>
+     </tr>
+ </table>
+ 
+ <table align="center">
+  <tr>
+    <td align="center">Product Information</td>
+    </tr>
+  <tr>
+    <td><img src="Images-for-javascript/Product-description.png" width=1080 height=1000></td>
+     </tr>
+ </table>
+ 
+<table align="center">
+  <tr>
+    <td align="center">Backend</td>
+    </tr>
+  <tr>
+    <td><img src="Images-for-javascript/backend.png" width=1080 height=1000></td>
+     </tr>
+ </table>
+ 
+ 
+ <table align="center">
+  <tr>
+    <td align="center">Checkout</td>
+    </tr>
+  <tr>
+    <td><img src="Images-for-javascript/checkout.png" width=1080 height=1000></td>
+     </tr>
+ </table>
 
-checkout
-![alt text](https://shoppingcart-image.s3.us-east-2.amazonaws.com/Images-for-javascript/checkout.png
 
-Backend
-
-![alt text](https://shoppingcart-image.s3.us-east-2.amazonaws.com/Images-for-javascript/backend.png
-
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
-
-## Component Hierarchy
-
-Show your component hierarchy here! Use [this](https://cms-assets.tutsplus.com/uploads/users/1795/posts/30352/image/GettingStartedWithReduxTutorial-React-Component-Structure.png) as an example.
+<table align="center">
+  <tr>
+    <td align="center"> Component Hierarchy</td>
+    </tr>
+  <tr>
+    <td><img src="Images-for-javascript/component.png" width=1080 height=1000></td>
+     </tr>
+ </table>
 
 ## API and Data Sample
 
@@ -85,19 +113,17 @@ Show us a snippet of JSON returned by your Airtable (you can find it under the A
 The functionality will then be divided into two separate lists: MVP and PostMVP. Carefully decide what is placed into your MVP, as the client will expect this functionality to be implemented upon project completion.
 
 #### MVP
-
-_These are examples only. Replace with your own MVP features._
-
-- Find and use external api
-- Render data on page
-- Allow user to choose favorites
-
+-Able to add new product with images
+-Edit product
+ -Delete product.
+### On the the front end, customer/user will be able to do the following:
+1 View list of product in the store
 #### PostMVP
 
 _These are examples only. Replace with your own Post-MVP features._
 
-- Add second API
-- Use local storage to save user favorites
+- Add authenticaton
+- add stripe payment
 
 ## Project Schedule
 
