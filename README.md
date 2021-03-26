@@ -23,7 +23,7 @@ Use this section to describe your final project and perhaps any links to relevan
 ## Wireframes
 
 
-<table>
+<table align="center">
   <tr>
     <td>Home Page</td>
     </tr>
