@@ -26,13 +26,38 @@ Use this section to describe your final project and perhaps any links to relevan
 <table>
   <tr>
     <td>Home Page</td>
-     
-  </tr>
+    </tr>
   <tr>
-    <td><img src="Images-for-javascript/HomePage.png" width=500 height=500></td>
-    
-    
-  </tr>
+    <td><img src="Images-for-javascript/homepage.png" width=500 height=500></td>
+     </tr>
+ </table>
+ 
+ <table>
+  <tr>
+    <td>Home Page</td>
+    </tr>
+  <tr>
+    <td><img src="Images-for-javascript/Product-description.png" width=500 height=500></td>
+     </tr>
+ </table>
+ 
+ <table>
+  <tr>
+    <td>Home Page</td>
+    </tr>
+  <tr>
+    <td><img src="Images-for-javascript/backend.png" width=500 height=500></td>
+     </tr>
+ </table>
+ 
+ 
+ <table>
+  <tr>
+    <td>Home Page</td>
+    </tr>
+  <tr>
+    <td><img src="Images-for-javascript/checkout.png" width=500 height=500></td>
+     </tr>
  </table>
 
 
