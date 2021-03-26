@@ -63,14 +63,14 @@ Use this section to describe your final project and perhaps any links to relevan
 
 Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
 
-## Component Hierarchy
+
 
 <table align="center">
   <tr>
-    <td align="center">Home Page</td>
+    <td align="center"> Component Hierarchy</td>
     </tr>
   <tr>
-    <td><img src="Images-for-javascript/homepage.png" width=1080 height=1000></td>
+    <td><img src="Images-for-javascript/component.png" width=1080 height=1000></td>
      </tr>
  </table>
 
