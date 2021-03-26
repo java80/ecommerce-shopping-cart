@@ -10,8 +10,7 @@ The name of your project.
 ## Project Description
 
 In this project,a fully functional e-commerce web application will be built in React JS, using https://airtable.com/api api design.
-<<<<<<< HEAD
-=======
+
 In the backend, the E-commerce administrator will be able to do the following:
 1 Able to add new product with no image
 2 Edit product
@@ -19,7 +18,6 @@ In the backend, the E-commerce administrator will be able to do the following:
 On the the front end, customer/user will be able to do the following:
 1 View list of product in the store
 2 Add product to the shopping cart
->>>>>>> a6b82732f948844d26b0290ba0a6288662d96ebf
 
 - Able to add new product with url images
 - Edit product
@@ -28,10 +26,6 @@ On the the front end, customer/user will be able to do the following:
 
 ## Wireframes
 
-<<<<<<< HEAD
-=======
-
->>>>>>> a6b82732f948844d26b0290ba0a6288662d96ebf
 <table align="center">
   <tr>
     <td align="center">Home Page</td>
@@ -58,25 +52,11 @@ On the the front end, customer/user will be able to do the following:
     <td><img src="Images-for-javascript/backend.png" width=1080 height=1000></td>
      </tr>
  </table>
- 
- 
- <table align="center">
-  <tr>
-    <td align="center">Checkout</td>
-    </tr>
-  <tr>
-    <td><img src="Images-for-javascript/checkout.png" width=1080 height=1000></td>
-     </tr>
- </table>
-
-<<<<<<< HEAD
-=======
-
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
 
 
 
->>>>>>> a6b82732f948844d26b0290ba0a6288662d96ebf
+Upload images of your wireframes to an image hosting site or add them to an assets folder 
+
 <table align="center">
   <tr>
     <td align="center"> Component Hierarchy</td>
@@ -90,50 +70,48 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 
 ```json
 {
-    "records": [
-        {
-            "id": "recUWgp8y9KdGjiaI",
-            "fields": {
-                "name": "Gold Watch",
-                "category": "Accessory",
-                "description": "Danish design by Jakob Wagner for a timeless look Interchangeable straps for versatility Ethical packaging for a more sustainable tomorrow Dial Colour...",
-                "price": "30",
-                "qauntity": "10"
-            },
-            "createdTime": "2021-03-26T13:10:03.000Z"
-        },
-        {
-            "id": "recNIie1gm7CsH70H",
-            "fields": {
-                "name": "Philosopher - BUNDLE White",
-                "category": "Accessory",
-                "description": "Ethical packaging for a more sustainable tomorrow",
-                "price": "40",
-                "qauntity": "20"
-            },
-            "createdTime": "2021-03-26T13:10:03.000Z"
-        },
-        {
-            "id": "recL5Lclb4v9qWsvs",
-            "fields": {
-                "name": "Womens Gold Rolex Watch 16233",
-                "category": "Accessory",
-                "description": "Rolex Datejust 36MM with a Jubilee Band. You can customize the bezel type between Gold Fluted Bezel or Diamond Bezel",
-                "price": "50",
-                "qauntity": "52"
-            },
-            "createdTime": "2021-03-26T13:10:03.000Z"
-        }
-    ],
-    "offset": "recL5Lclb4v9qWsvs"
+  "records": [
+    {
+      "id": "recUWgp8y9KdGjiaI",
+      "fields": {
+        "name": "Gold Watch",
+        "category": "Accessory",
+        "description": "Danish design by Jakob Wagner for a timeless look Interchangeable straps for versatility Ethical packaging for a more sustainable tomorrow Dial Colour...",
+        "price": "30",
+        "qauntity": "10"
+      },
+      "createdTime": "2021-03-26T13:10:03.000Z"
+    },
+    {
+      "id": "recNIie1gm7CsH70H",
+      "fields": {
+        "name": "Philosopher - BUNDLE White",
+        "category": "Accessory",
+        "description": "Ethical packaging for a more sustainable tomorrow",
+        "price": "40",
+        "qauntity": "20"
+      },
+      "createdTime": "2021-03-26T13:10:03.000Z"
+    },
+    {
+      "id": "recL5Lclb4v9qWsvs",
+      "fields": {
+        "name": "Womens Gold Rolex Watch 16233",
+        "category": "Accessory",
+        "description": "Rolex Datejust 36MM with a Jubilee Band. You can customize the bezel type between Gold Fluted Bezel or Diamond Bezel",
+        "price": "50",
+        "qauntity": "52"
+      },
+      "createdTime": "2021-03-26T13:10:03.000Z"
+    }
+  ],
+  "offset": "recL5Lclb4v9qWsvs"
 }
-
 ```
 
 ### MVP/PostMVP
 
 #### MVP
-<<<<<<< HEAD
 
 -View list of product in the store
 -Able to add new product with image url
@@ -143,20 +121,21 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 
 - Add authenticaton
 - add stripe payment
-- shipping
-=======
--Able to add new product with images
--Edit product
- -Delete product.
+- # shipping
+  -Able to add new product with images
+  -Edit product
+  -Delete product.
+
 ### On the the front end, customer/user will be able to do the following:
+
 1 View list of product in the store
+
 #### PostMVP
 
 _These are examples only. Replace with your own Post-MVP features._
 
 - Add authenticaton
 - add stripe payment
->>>>>>> a6b82732f948844d26b0290ba0a6288662d96ebf
 
 ## Project Schedule
 
@@ -175,16 +154,15 @@ This schedule will be used to keep track of your progress throughout the week an
 
 ## Timeframes
 
-| Component        | Priority | Estimated Time | Time Invested | Actual Time |
-| ---------------- | :------: | :------------: | :-----------: | :---------: |
-| Adding prduct Form      |    H     |      3hrs      |        |       |
-| Working with API |    H     |      3hrs      |        |       |
-| Total            |    H     |      6hrs      |          |        |
+| Component          | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------ | :------: | :------------: | :-----------: | :---------: |
+| Adding prduct Form |    H     |      3hrs      |               |             |
+| Working with API   |    H     |      3hrs      |               |             |
+| Total              |    H     |      6hrs      |               |             |
 
 ## SWOT Analysis
 
 ### Strengths:
-<<<<<<< HEAD
 
 I can put this together in using react using examples of what we have been doing in the class
 
@@ -192,19 +170,18 @@ I can put this together in using react using examples of what we have been doing
 
 UI/styling and positioning of it tags is still a challenge for me
 
-=======
- I can put this together in using react using examples of what we have been doing in the class
+I can put this together in using react using examples of what we have been doing in the class
+
 ### Weaknesses:
- UI/styling and positioning of it tags is still a challenge for me
->>>>>>> a6b82732f948844d26b0290ba0a6288662d96ebf
+
+UI/styling and positioning of it tags is still a challenge for me
+
 ### Opportunities:
+
 A chance for me to play with uploading images
 
 A chance for me to play with uploading images
 
 ### Threats:
-<<<<<<< HEAD
 
-=======
->>>>>>> a6b82732f948844d26b0290ba0a6288662d96ebf
 I don't see any threats here now
