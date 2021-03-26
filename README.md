@@ -22,18 +22,22 @@ Use this section to describe your final project and perhaps any links to relevan
 
 ## Wireframes
 
-Home page of the site
-![alt text](http://https://shoppingcart-image.s3.us-east-2.amazonaws.com/Images-for-javascript/homepage.png)
 
-Product information
-![alt text](https://shoppingcart-image.s3.us-east-2.amazonaws.com/Images-for-javascript/Product-description.png
+<table>
+  <tr>
+    <td>Home Page</td>
+     <td>Product Information</td>
+     <td>Checkout</td>
+    <td>Backend</td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/Screenshot_1582745092.png" width=270 height=480></td>
+    <td><img src="screenshots/Screenshot_1582745125.png" width=270 height=480></td>
+    <td><img src="screenshots/Screenshot_1582745139.png" width=270 height=480></td>
+    <td><img src="screenshots/Screenshot_1582745139.png" width=270 height=480></td>
+  </tr>
+ </table>
 
-checkout
-![alt text](https://shoppingcart-image.s3.us-east-2.amazonaws.com/Images-for-javascript/checkout.png
-
-Backend
-
-![alt text](https://shoppingcart-image.s3.us-east-2.amazonaws.com/Images-for-javascript/backend.png
 
 Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
 
