@@ -115,23 +115,20 @@ Show us a snippet of JSON returned by your Airtable (you can find it under the A
 
 ### MVP/PostMVP
 
-
 The functionality will then be divided into two separate lists: MVP and PostMVP. Carefully decide what is placed into your MVP, as the client will expect this functionality to be implemented upon project completion.
 
 #### MVP
-
-_These are examples only. Replace with your own MVP features._
-
-- Find and use external api
-- Render data on page
-- Allow user to choose favorites
-
+-Able to add new product with images
+-Edit product
+ -Delete product.
+### On the the front end, customer/user will be able to do the following:
+1 View list of product in the store
 #### PostMVP
 
 _These are examples only. Replace with your own Post-MVP features._
 
-- Add second API
-- Use local storage to save user favorites
+- Add authenticaton
+- add stripe payment
 
 ## Project Schedule
 
