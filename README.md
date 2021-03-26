@@ -65,7 +65,14 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 
 ## Component Hierarchy
 
-Show your component hierarchy here! Use [this](https://cms-assets.tutsplus.com/uploads/users/1795/posts/30352/image/GettingStartedWithReduxTutorial-React-Component-Structure.png) as an example.
+<table align="center">
+  <tr>
+    <td align="center">Home Page</td>
+    </tr>
+  <tr>
+    <td><img src="Images-for-javascript/homepage.png" width=1080 height=1000></td>
+     </tr>
+ </table>
 
 ## API and Data Sample
 
