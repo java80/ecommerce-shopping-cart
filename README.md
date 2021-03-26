@@ -26,15 +26,12 @@ Use this section to describe your final project and perhaps any links to relevan
 <table>
   <tr>
     <td>Home Page</td>
-     <td>Product Information</td>
-     <td>Checkout</td>
-    <td>Backend</td>
+     
   </tr>
   <tr>
-    <td><img src="Images-for-javascript/HomePage.png" width=270 height=480></td>
-    <td><img src="Images-for-javascript/Product-description.png" width=270 height=480></td>
-    <td><img src="Images-for-javascript/Checkout.png" width=270 height=480></td>
-    <td><img src="Images-for-javascript.png" width=270 height=480></td>
+    <td><img src="Images-for-javascript/HomePage.png" width=500 height=500></td>
+    
+    
   </tr>
  </table>
 
