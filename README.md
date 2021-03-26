@@ -28,7 +28,7 @@ Use this section to describe your final project and perhaps any links to relevan
     <td align="center">Home Page</td>
     </tr>
   <tr>
-    <td><img src="Images-for-javascript/homepage.png" width=1080 height=500></td>
+    <td><img src="Images-for-javascript/homepage.png" width=1080 height=1000></td>
      </tr>
  </table>
  
@@ -37,7 +37,7 @@ Use this section to describe your final project and perhaps any links to relevan
     <td align="center">Product Information</td>
     </tr>
   <tr>
-    <td><img src="Images-for-javascript/Product-description.png" width=500 height=500></td>
+    <td><img src="Images-for-javascript/Product-description.png" width=1080 height=1000></td>
      </tr>
  </table>
  
@@ -46,7 +46,7 @@ Use this section to describe your final project and perhaps any links to relevan
     <td align="center">Backend</td>
     </tr>
   <tr>
-    <td><img src="Images-for-javascript/backend.png" width=500 height=500></td>
+    <td><img src="Images-for-javascript/backend.png" width=1080 height=1000></td>
      </tr>
  </table>
  
@@ -56,7 +56,7 @@ Use this section to describe your final project and perhaps any links to relevan
     <td align="center">Checkout</td>
     </tr>
   <tr>
-    <td><img src="Images-for-javascript/checkout.png" width=500 height=500></td>
+    <td><img src="Images-for-javascript/checkout.png" width=1080 height=1000></td>
      </tr>
  </table>
 
