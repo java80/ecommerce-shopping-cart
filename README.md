@@ -32,7 +32,7 @@ Use this section to describe your final project and perhaps any links to relevan
      </tr>
  </table>
  
- <table>
+ <table align="center">
   <tr>
     <td>Home Page</td>
     </tr>
@@ -41,7 +41,7 @@ Use this section to describe your final project and perhaps any links to relevan
      </tr>
  </table>
  
- <table>
+<table align="center">
   <tr>
     <td>Home Page</td>
     </tr>
@@ -51,7 +51,7 @@ Use this section to describe your final project and perhaps any links to relevan
  </table>
  
  
- <table>
+ <table align="center">
   <tr>
     <td>Home Page</td>
     </tr>
