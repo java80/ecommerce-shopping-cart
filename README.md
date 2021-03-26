@@ -31,10 +31,10 @@ Use this section to describe your final project and perhaps any links to relevan
     <td>Backend</td>
   </tr>
   <tr>
-    <td><img src="screenshots/Screenshot_1582745092.png" width=270 height=480></td>
-    <td><img src="screenshots/Screenshot_1582745125.png" width=270 height=480></td>
-    <td><img src="screenshots/Screenshot_1582745139.png" width=270 height=480></td>
-    <td><img src="screenshots/Screenshot_1582745139.png" width=270 height=480></td>
+    <td><img src="Images-for-javascript/HomePage.png" width=270 height=480></td>
+    <td><img src="Images-for-javascript/Product-description.png" width=270 height=480></td>
+    <td><img src="Images-for-javascript/Checkout.png" width=270 height=480></td>
+    <td><img src="Images-for-javascript.png" width=270 height=480></td>
   </tr>
  </table>
 
