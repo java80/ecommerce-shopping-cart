@@ -10,17 +10,13 @@ The name of your project.
 ## Project Description
 
 In this project,a fully functional e-commerce web application will be built in React JS, using https://airtable.com/api api design.
-In the backend, the E-commerce administrator will be able to do the following:
-1 Able to add new product with images
-2 Edit product
-3 Delete product.
-On the the front end, customer/user will be able to do the following:
-1 View list of product in the store
-2 Add product to the shopping cart
 
+- Able to add new product with url images
+- Edit product
+- View list of product in the store
+- Add product to the shopping cart
 
 ## Wireframes
-
 
 <table align="center">
   <tr>
@@ -59,7 +55,6 @@ On the the front end, customer/user will be able to do the following:
      </tr>
  </table>
 
-
 <table align="center">
   <tr>
     <td align="center"> Component Hierarchy</td>
@@ -70,8 +65,6 @@ On the the front end, customer/user will be able to do the following:
  </table>
 
 ## API and Data Sample
-
-Show us a snippet of JSON returned by your Airtable (you can find it under the API documentation) so we know you can access it and get the info you need. This **must** be properly formatted. An example is below:
 
 ```json
 {
@@ -110,20 +103,17 @@ Show us a snippet of JSON returned by your Airtable (you can find it under the A
 
 ### MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MVP and PostMVP. Carefully decide what is placed into your MVP, as the client will expect this functionality to be implemented upon project completion.
-
 #### MVP
--Able to add new product with images
--Edit product
- -Delete product.
-### On the the front end, customer/user will be able to do the following:
-1 View list of product in the store
-#### PostMVP
 
-_These are examples only. Replace with your own Post-MVP features._
+-View list of product in the store
+-Able to add new product with image url
+-Edit product
+
+#### PostMVP
 
 - Add authenticaton
 - add stripe payment
+- shipping
 
 ## Project Schedule
 
@@ -132,18 +122,15 @@ This schedule will be used to keep track of your progress throughout the week an
 | Day        | Deliverable                                        | Status     |
 | ---------- | -------------------------------------------------- | ---------- |
 | July 10-12 | Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete |
-| July 13    | Project Approval                                   | Incomplete |
-| July 13    | Core Application Structure (HTML, CSS, etc.)       | Incomplete |
-| July 14    | Pseudocode / actual code                           | Incomplete |
-| July 15    | Initial Clickable Model                            | Incomplete |
-| July 16    | MVP                                                | Incomplete |
-| July 17    | Presentations                                      | Incomplete |
+| March 26   | Project Approval                                   | Incomplete |
+| March 27   | Core Application Structure (HTML, CSS, etc.)       | Incomplete |
+| March 28   | Pseudocode / actual code /apicall                  | Incomplete |
+| March 29   | Initial Clickable Model                            | Incomplete |
+| March 31   | MVP                                                | Incomplete |
+| April 1    | css/styling/booststrap/                            | Incomplete |
+| April 2    | Presentations                                      | Incomplete |
 
 ## Timeframes
-
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle. You have limited time to code all parts of your app. Your estimates can then be used to evalute possibilities based on time needed and the actual time you have before the app must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add an additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
 
 | Component        | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------- | :------: | :------------: | :-----------: | :---------: |
@@ -155,8 +142,16 @@ Time frames are also key in the development cycle. You have limited time to code
 
 ### Strengths:
 
+I can put this together in using react using examples of what we have been doing in the class
+
 ### Weaknesses:
+
+UI/styling and positioning of it tags is still a challenge for me
 
 ### Opportunities:
 
+A chance for me to play with uploading images
+
 ### Threats:
+
+I don't see any threats here now
