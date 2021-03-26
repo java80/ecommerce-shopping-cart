@@ -1,70 +1,120 @@
-# Getting Started with Create React App
+# Project Overview
+This project is React implementation of ecommerce site using https://airtable.com/api
+## Project Name
+React Ecommerce-shopping Cart
+The name of your project.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
+In this project,a fully functional e-commerce web application will be built in React JS, using https://airtable.com/api api design. 
+In the backend, the E-commerce administrator will be able to do the following:
+1  Able to add new  product with images
+2  Edit  product
+3  Delete product.
+On the the front end, customer/user will be able to do the following:
+1  View list of product in the store
+2  Add product to the shopping cart
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and/or functionality.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Wireframes
+ Home page of the site
+ https://shoppingcart-image.s3.us-east-2.amazonaws.com/Images-for-javascript/homepage.png
+https://whimsical.com/react-shopping-cart-AqH1k47tuwrTzhk3bbjSRn
+Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Component Hierarchy
+Show your component hierarchy here! Use [this](https://cms-assets.tutsplus.com/uploads/users/1795/posts/30352/image/GettingStartedWithReduxTutorial-React-Component-Structure.png) as an example.
 
-### `npm test`
+## API and Data Sample
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Show us a snippet of JSON returned by your Airtable (you can find it under the API documentation) so we know you can access it and get the info you need. This __must__ be properly formatted. An example is below:
 
-### `npm run build`
+```json
+{
+    "records": [
+        {
+            "id": "recONRzIUTuZ5lXaF",
+            "fields": {
+                "author": "Liz Yrineo",
+                "setup": "Why did the tomato turn red?",
+                "punchline": "Because it saw the salad dressing!"
+            },
+            "createdTime": "2020-11-30T16:03:09.000Z"
+        },
+        {
+            "id": "rec3oYZ5Tp0AIDsKe",
+            "fields": {
+                "author": "Rachel Moskowitz",
+                "setup": "What did the green grape say to the red grape?",
+                "punchline": "Breathe, idiot, breathe!"
+            },
+            "createdTime": "2020-11-30T16:03:09.000Z"
+        },
+        {
+            "id": "recA34tOaoE1IVeC1",
+            "fields": {
+                "author": "Gary Grant",
+                "setup": "How do you make holy water?",
+                "punchline": "You boil the hell out of it!"
+            },
+            "createdTime": "2020-11-30T16:03:09.000Z"
+        }
+    ],
+    "offset": "recA34tOaoE1IVeC1"
+}
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### MVP/PostMVP
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The functionality will then be divided into two separate lists: MVP and PostMVP.  Carefully decide what is placed into your MVP, as the client will expect this functionality to be implemented upon project completion.  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### MVP 
+*These are examples only. Replace with your own MVP features.*
 
-### `npm run eject`
+- Find and use external api 
+- Render data on page 
+- Allow user to choose favorites 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### PostMVP  
+*These are examples only. Replace with your own Post-MVP features.*
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Add second API
+- Use local storage to save user favorites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Project Schedule
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This schedule will be used to keep track of your progress throughout the week and align with our expectations. Here's an example.
 
-## Learn More
+|  Day | Deliverable | Status
+|---|---| ---|
+|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|July 13| Project Approval | Incomplete
+|July 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|July 14| Pseudocode / actual code | Incomplete
+|July 15| Initial Clickable Model  | Incomplete
+|July 16| MVP | Incomplete
+|July 17| Presentations | Incomplete
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Timeframes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
 
-### Code Splitting
+Time frames are also key in the development cycle.  You have limited time to code all parts of your app.  Your estimates can then be used to evalute possibilities based on time needed and the actual time you have before the app must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add an additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
+| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
+| Total | H | 6hrs| 5hrs | 5hrs |
 
-### Analyzing the Bundle Size
+## SWOT Analysis
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Strengths:
 
-### Making a Progressive Web App
+### Weaknesses:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Opportunities:
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Threats:
