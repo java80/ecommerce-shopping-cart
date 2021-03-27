@@ -5,7 +5,7 @@ This project is React implementation of ecommerce site using https://airtable.co
 ## Project Name
 
 React Ecommerce-shopping Cart
-The name of your project.
+
 
 ## Project Description
 
@@ -49,7 +49,7 @@ On the the front end, customer/user will be able to do the following:
     <td align="center">Backend</td>
     </tr>
   <tr>
-    <td><img src="Images-for-javascript/backend.png" width=1080 height=1000></td>
+    <td><img src="Images-for-javascript/backendroute.png" width=1080 height=1000></td>
      </tr>
  </table>
 
@@ -70,50 +70,60 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 
 ```json
 {
-  "records": [
-    {
-      "id": "recUWgp8y9KdGjiaI",
-      "fields": {
-        "name": "Gold Watch",
-        "category": "Accessory",
-        "description": "Danish design by Jakob Wagner for a timeless look Interchangeable straps for versatility Ethical packaging for a more sustainable tomorrow Dial Colour...",
-        "price": "30",
-        "qauntity": "10"
-      },
-      "createdTime": "2021-03-26T13:10:03.000Z"
-    },
-    {
-      "id": "recNIie1gm7CsH70H",
-      "fields": {
-        "name": "Philosopher - BUNDLE White",
-        "category": "Accessory",
-        "description": "Ethical packaging for a more sustainable tomorrow",
-        "price": "40",
-        "qauntity": "20"
-      },
-      "createdTime": "2021-03-26T13:10:03.000Z"
-    },
-    {
-      "id": "recL5Lclb4v9qWsvs",
-      "fields": {
-        "name": "Womens Gold Rolex Watch 16233",
-        "category": "Accessory",
-        "description": "Rolex Datejust 36MM with a Jubilee Band. You can customize the bezel type between Gold Fluted Bezel or Diamond Bezel",
-        "price": "50",
-        "qauntity": "52"
-      },
-      "createdTime": "2021-03-26T13:10:03.000Z"
-    }
-  ],
-  "offset": "recL5Lclb4v9qWsvs"
+    "records": [
+        {
+            "id": "recUWgp8y9KdGjiaI",
+            "fields": {
+                "price": "30",
+                "category": "Men Cloths",
+                "qauntity": "10",
+                "name": "Black Jack",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+                "imgurl1": "https://i.imgur.com/aZtyu5b.jpg",
+                "imageurl2": "https://i.imgur.com/aZtyu5b.jpg",
+                "imgurl3": "https://i.imgur.com/aZtyu5b.jpg"
+            },
+            "createdTime": "2021-03-26T13:10:03.000Z"
+        },
+        {
+            "id": "recNIie1gm7CsH70H",
+            "fields": {
+                "price": "40",
+                "category": "Accessory",
+                "qauntity": "20",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+                "name": "Gloves",
+                "imgurl1": "https://i.imgur.com/D4ZEz31.jpg",
+                "imageurl2": "https://i.imgur.com/D4ZEz31.jpg",
+                "imgurl3": "https://i.imgur.com/D4ZEz31.jpg"
+            },
+            "createdTime": "2021-03-26T13:10:03.000Z"
+        },
+        {
+            "id": "recL5Lclb4v9qWsvs",
+            "fields": {
+                "price": "50",
+                "category": "Men Cloths",
+                "qauntity": "52",
+                "name": "Hood Jack",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+                "imgurl1": "https://i.imgur.com/l6ZuCB9.jpg",
+                "imageurl2": "https://i.imgur.com/l6ZuCB9.jpg",
+                "imgurl3": "https://i.imgur.com/l6ZuCB9.jpg"
+            },
+            "createdTime": "2021-03-26T13:10:03.000Z"
+        }
+    ],
+    "offset": "recL5Lclb4v9qWsvs"
 }
+
 ```
 
 ### MVP/PostMVP
 
 #### MVP
 
--View list of product in the store
+-View list of product in the store/backend
 -Able to add new product with image url
 -Edit product
 
