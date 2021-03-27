@@ -166,11 +166,6 @@ This schedule will be used to keep track of your progress throughout the week an
 
 I can put this together in using react using examples of what we have been doing in the class
 
-### Weaknesses:
-
-UI/styling and positioning of it tags is still a challenge for me
-
-I can put this together in using react using examples of what we have been doing in the class
 
 ### Weaknesses:
 
