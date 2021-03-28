@@ -4,25 +4,16 @@ This project is React implementation of ecommerce site using https://airtable.co
 
 ## Project Name
 
-React Ecommerce-shopping Cart
-
+React Ecommerce-Backend-Inventory managment
 
 ## Project Description
 
-In this project,a fully functional e-commerce web application will be built in React JS, using https://airtable.com/api api design.
+In this project,React Ecommerce-Backend-Inventory managment application will be built in React JS, using https://airtable.com/api api design.
 
-In the backend, the E-commerce administrator will be able to do the following:
-1 Able to add new product with no image
-2 Edit product
-3 Delete product.
-On the the front end, customer/user will be able to do the following:
-1 View list of product in the store
-2 Add product to the shopping cart
-
-- Able to add new product with url images
-- Edit product
-- View list of product in the store
-- Add product to the shopping cart
+The client will be able to do the following:
+-View list of product in the store/backend
+-Able to add new product with image url
+-Edit product
 
 ## Wireframes
 
