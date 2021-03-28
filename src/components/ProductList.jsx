@@ -12,8 +12,8 @@ function ProductList(props) {
 }, []);
   async function getProduct() {
     let response = await axios.get(baseURL, config);
-    //setProducts(response.data.records);
-    console.log(response);
+    setProducts(response.data.records);
+    
 
   }
   

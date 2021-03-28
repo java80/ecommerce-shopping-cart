@@ -122,25 +122,19 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 
 - Add authenticaton
 - add stripe payment
-- # shipping
-  -Able to add new product with images
-  -Edit product
+- shipping
+  -Able to add new product with images upload button
   -Delete product.
 
 ### On the the front end, customer/user will be able to do the following:
 
-1 View list of product in the store
+-1 View list of product in the store
 
 #### PostMVP
-
-_These are examples only. Replace with your own Post-MVP features._
-
-- Add authenticaton
-- add stripe payment
+-Add authenticaton
+-Add stripe payment
 
 ## Project Schedule
-
-This schedule will be used to keep track of your progress throughout the week and align with our expectations. Here's an example.
 
 | Day        | Deliverable                                        | Status     |
 | ---------- | -------------------------------------------------- | ---------- |
