@@ -1,11 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router } from "react-router-dom";
+import { Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Product from "./components/ProductList";
+import Form from "./components/Form";
+import ProductList from './components/ProductList';
+
 function App() {
 
   return (
     <div className="App">
-      <h1> List of Product</h1>
+      
+      <Header />
+            <Route exact path='/'>
+                <ProductList />
+            </Route>
+            <Route path='/new'>
+                <Form />
+            </Route>
+            <Footer />
     </div>
   );
 }

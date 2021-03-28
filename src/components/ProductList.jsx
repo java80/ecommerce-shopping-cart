@@ -1,16 +1,19 @@
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { baseURL, config } from "../services";
-import { useState, useEffect } from "react";
+import Product from "./Product";
+
 
 function ProductList(props) {
   let [products, setProducts] = useState([]);
-  let [currentProduct, setCurrentProdut] = useState({});
+  let [currentProduct, setCurrentProduct] = useState({});
   useEffect(() => {
-    getData();
+    getProduct();
 }, []);
-  async function getData() {
+  async function getProduct() {
     let response = await axios.get(baseURL, config);
-    console.log(response.data);
+    //setProducts(response.data.records);
+    console.log(response);
 
   }
   
