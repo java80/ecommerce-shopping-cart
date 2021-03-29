@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { baseURL, config } from "../services";
 import Product from "./Product";
@@ -9,20 +10,24 @@ function ProductList(props) {
   let [currentProduct, setCurrentProduct] = useState({});
   useEffect(() => {
     getProduct();
-}, []);
+  }, []);
   async function getProduct() {
     let response = await axios.get(baseURL, config);
     setProducts(response.data.records);
-    
+    setCurrentProduct(response.data.records);
+    console.log(response.data);
+
 
   }
-  
+
   return (
-    <div id='flex-container'>
+    <div className="grid-container ">
 
 
+      <div>
+        <Product currentProduct={currentProduct} />
       </div>
-
+    </div>
   )
 
 }

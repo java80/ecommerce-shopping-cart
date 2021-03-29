@@ -4,9 +4,8 @@ function Product(props) {
     <div id='flex-container'>
       <div>
       <h2>{product.name}</h2>
-      <h4>{product.artist}</h4>
-      <h6>"{product.lyric}"</h6>
-
+      <h4>{product.description}</h4>
+      <h6>{product.price}</h6>
 
       </div>
      
