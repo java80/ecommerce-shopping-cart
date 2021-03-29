@@ -1,8 +1,12 @@
-.table-container{
+/* .table-container{
 text-align: center;
 display: inline-block;
+} */
+.table-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
 div.table 
   {
       display:table;

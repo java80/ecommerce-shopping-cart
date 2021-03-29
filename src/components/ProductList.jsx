@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { baseURL, config } from "../services";
 import Product from "./Product";
+import Search from "./Search";
 
 
 function ProductList(props) {
@@ -22,10 +23,12 @@ function ProductList(props) {
 
   return (
     <div className="grid-container ">
-
+      <Search>
+        
+     </Search>
 
       <div>
-        { products.map(product => (<Product currentProduct ={product} />))} 
+        { products.map(product => (<Product currentProduct ={product} key={product.id} />))} 
         {/* <Product currentProduct={currentProduct} /> */}
       </div>
 

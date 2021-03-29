@@ -151,7 +151,7 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 
 | Component          | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------ | :------: | :------------: | :-----------: | :---------: |
-| Adding prduct Form |    H     |      3hrs      |               |             |
+| Adding product Form |    H     |      3hrs      |               |             |
 | Working with API   |    H     |      3hrs      |               |             |
 | Total              |    H     |      6hrs      |               |             |
 

@@ -1,16 +1,21 @@
-function ProductList(props) {
+import React from "react";
+
+function Search(props) {
 
 
 
   return (
     <div id='flex-container'>
-          
       <div>
-        
-        
-       </div>
+        <label htmlFor='search'>Search</label>
+        <input
+          type='text'
+          name='search'
+          id='search'
 
+        />
       </div>
+    </div>
 
   )
 
