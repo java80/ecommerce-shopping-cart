@@ -18,7 +18,8 @@ function App() {
             </Route>
             <Route path='/new'>
                 <Form />
-            </Route>
+      </Route>
+      
             <Footer />
     </div>
   );

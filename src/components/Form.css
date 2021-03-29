@@ -16,3 +16,9 @@ div.table
   {
       display:table-cell;
   }
+  .button-row{
+    background-color: red;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }

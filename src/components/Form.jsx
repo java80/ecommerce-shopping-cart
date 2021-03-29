@@ -1,10 +1,12 @@
 import "./Form.css";
-
+import Product from "./Product";
+import {useParams} from "react-router-dom"
 function Form(props) {
+  
 
   return (
 
-    <div className ="table-container">
+    <div className="table-container">
       <div className="table">
         <div className="tr">
           <label className="td">Product Name</label>
@@ -25,7 +27,12 @@ function Form(props) {
           <label className="td"><input type="text" /></label>
           <label className="td"><input type="text" /></label>
           <label className="td"><input type="text" /></label>
+          <button  type="submit" >Submit</button>
         </form>
+
+        
+
+  
       </div>
     </div>
 

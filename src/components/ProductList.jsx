@@ -25,8 +25,10 @@ function ProductList(props) {
 
 
       <div>
-        <Product currentProduct={currentProduct} />
+        { products.map(product => (<Product currentProduct ={product} />))} 
+        {/* <Product currentProduct={currentProduct} /> */}
       </div>
+
     </div>
   )
 
