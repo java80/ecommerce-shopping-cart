@@ -33,7 +33,7 @@ function Productdetails() {
       <div className="produt-main-image"> <img src={product.fields.imgurl1} />  </div>
       <div className="product-name-price">
         <div> <h1> {product.fields.name} </h1> </div>
-        <div> <h2> {product.fields.price} </h2><button> </button></div>
+        <div> <h2> {product.fields.price} <button> </button> </h2></div>
         <div> <h3>{product.fields.description}</h3></div>
         <div> <h1>  Category:  {product.fields.category} </h1></div>
       </div>

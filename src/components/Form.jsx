@@ -50,7 +50,8 @@ function Form(props) {
           <label className="td"><input type="text" name='name' id="imgurl2" value={product.imgurl2} onChange={handleChange} /></label>
           <label className="td"><input type="text" name='name' id="imgurl3" value={product.imgurl3} onChange={handleChange} /></label>
           <label className="td"><input type="text" name='name' id="description" value={product.description} onChange={handleChange} /></label>
-          <button type="submit" >Submit</button>
+          <button type="submit" >Add Product</button>
+          <button type="submit" >Edit Product</button>
         </form>
       </div>
     </div>

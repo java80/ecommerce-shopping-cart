@@ -16,7 +16,10 @@ function App() {
         <ProductList />
       </Route>
       <Route path="/new">
-        <Form />
+        <div>
+          <Form />
+        <ProductList />
+        </div>
       </Route>
       <Route path="/product/:id">
     <Productdetails/>
