@@ -1,7 +1,15 @@
 
+.product-container{
+  column-count: 4;
+  
+} 
 
-#product-list{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+#product-list div {
+  background-color: blue;
   
 }
+#product-list img {
+  height: 200px;
+  width: 200px;
+}
+

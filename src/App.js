@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Product from "./components/ProductList";
 import Form from "./components/Form";
 import ProductList from "./components/ProductList";
+import Productdetails from "./components/Productdetails";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
       </Route>
       <Route path="/new">
         <Form />
+      </Route>
+      <Route path="/product/:id">
+    <Productdetails/>
       </Route>
 
       <Footer />

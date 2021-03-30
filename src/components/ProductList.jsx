@@ -4,6 +4,7 @@ import axios from "axios";
 import { baseURL, config } from "../services";
 import Product from "./Product";
 import Search from "./Search";
+import "./Product.css";
 
 
 function ProductList(props) {
@@ -23,7 +24,7 @@ function ProductList(props) {
     // if all conditions are true then reset filtered products using our original api
     // data from song state
     if (
-        filteredProducts.length === 0 &&
+       // filteredProducts.length === 0 &&
         searchTerm === "" &&
         products.length !== 0
     ) {
@@ -44,7 +45,7 @@ function ProductList(props) {
   }
 
   return (
-    <div className="grid-container ">
+    <div className="search-container ">
       <Search
                     setSearchTerm={setSearchTerm}
                     searchTerm={searchTerm}
@@ -53,8 +54,8 @@ function ProductList(props) {
                     setFilteredProducts={setFilteredProducts}
                 />
 
-      <div>
-        { products.map(product => (<Product currentProduct ={product} key={product.id} />))} 
+      <div className= "product-container">
+        { filteredProducts.map(product => (<Product currentProduct ={product} key={product.id} />))} 
         {/* <Product currentProduct={currentProduct} /> */}
       </div>
 

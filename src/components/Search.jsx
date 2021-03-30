@@ -21,7 +21,7 @@ function Search(props) {
 
   return (
     <div id='flex-container'>
-      <div>
+    
             <label htmlFor='search'>Search</label>
             <input
                 type='text'
@@ -30,9 +30,6 @@ function Search(props) {
                 value={searchTerm}
                 onChange={handleChange}
             />
-        </div>
-
-
 
     </div>
 

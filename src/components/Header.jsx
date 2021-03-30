@@ -13,10 +13,6 @@ function Header() {
         <li className="shopping-cart"><img src="shop.png" width="50" height="50"></img> </li>
         <li><Link to='/new'>Add New Product</Link> </li>
         </ul>
-        
-
-
-
         </div>
 
         
