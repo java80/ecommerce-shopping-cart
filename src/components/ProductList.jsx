@@ -24,7 +24,7 @@ function ProductList(props) {
     // if all conditions are true then reset filtered products using our original api
     // data from song state
     if (
-       // filteredProducts.length === 0 &&
+      
         searchTerm === "" &&
         products.length !== 0
     ) {
@@ -40,8 +40,6 @@ function ProductList(props) {
     setCurrentProduct(response.data.records);
     console.log(response.data);
     setFilteredProducts(response.data.records);
-
-
   }
 
   return (

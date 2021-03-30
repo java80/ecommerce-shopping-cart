@@ -1,0 +1,27 @@
+.hover-image img{
+width: 200px;
+height: 200px;
+display:flex;
+flex-direction:row
+}
+.hover-image{
+  display: flex;
+  margin-left: 100px;
+}
+.product-details{
+  display:flex;
+  
+}
+.produt-main-image{
+display:flex;
+padding-left: 100px;
+padding-bottom:50px;
+
+}
+.product-main-image img{
+  width: 200px;
+height: 200px;
+}
+.product-name-price{
+  margin-right: 100px
+}
