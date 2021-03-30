@@ -9,23 +9,49 @@ import Search from "./Search";
 function ProductList(props) {
   let [products, setProducts] = useState([]);
   let [currentProduct, setCurrentProduct] = useState({});
+  let [searchTerm, setSearchTerm] = useState("");
+  let [filteredProducts, setFilteredProducts] = useState([]);
   useEffect(() => {
     getProduct();
   }, []);
+
+
+  useEffect(() => {
+    // checking here to see if there are no filtered products and
+    // the user has cleared the search bar
+    // and products has been populated
+    // if all conditions are true then reset filtered products using our original api
+    // data from song state
+    if (
+        filteredProducts.length === 0 &&
+        searchTerm === "" &&
+        products.length !== 0
+    ) {
+        setFilteredProducts(products);
+    }
+  }, [filteredProducts, searchTerm, products]);
+  
+
+
   async function getProduct() {
     let response = await axios.get(baseURL, config);
     setProducts(response.data.records);
     setCurrentProduct(response.data.records);
     console.log(response.data);
+    setFilteredProducts(response.data.records);
 
 
   }
 
   return (
     <div className="grid-container ">
-      <Search>
-        
-     </Search>
+      <Search
+                    setSearchTerm={setSearchTerm}
+                    searchTerm={searchTerm}
+                    setProducts={setProducts}
+                    products={products}
+                    setFilteredProducts={setFilteredProducts}
+                />
 
       <div>
         { products.map(product => (<Product currentProduct ={product} key={product.id} />))} 
