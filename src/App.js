@@ -8,27 +8,32 @@ import Form from "./components/Form";
 import ProductList from "./components/ProductList";
 import Productdetails from "./components/Productdetails";
 import ProductBackEndList from "./components/ProductBackEndList";
+import { Button } from 'react-bootstrap';
+import { useState } from "react";
 
 function App() {
+  const [toggle, setToggle] = useState(false)
   return (
+    <container>
     <div className="App">
       <Header />
       <Route exact path="/">
-        <ProductList />
+        <ProductList toggle = {toggle} setToggle = {setToggle} />
       </Route>
       <Route path="/new">
-        <Form />
-        <ProductList />
+        <Form toggle = {toggle} setToggle = {setToggle} />
+        <ProductList toggle = {toggle} setToggle = {setToggle}/>
       </Route>
       <Route path="/product/:id">
         <Productdetails />
       </Route>
       <Route path="/edit/:id">
-      {/* <Form products={products} /> */}
+      <Form  toggle = {toggle} setToggle = {setToggle}/>
         
       </Route>
       <Footer />
-    </div>
+      </div>
+      </container>
   );
 }
 

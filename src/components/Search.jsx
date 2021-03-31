@@ -22,8 +22,10 @@ function Search(props) {
   return (
     <div id='flex-container'>
     
-            <label htmlFor='search'>Search</label>
-            <input
+            <label htmlFor='search'></label>
+      <input
+        className="form-control mr-sm-2"
+        placeholder="Search" 
                 type='text'
                 name='search'
                 id='search'

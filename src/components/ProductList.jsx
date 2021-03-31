@@ -15,7 +15,7 @@ function ProductList(props) {
   let [filteredProducts, setFilteredProducts] = useState([]);
   useEffect(() => {
     getProduct();
-  }, []);
+  }, [props.toggle]);
 
 
   useEffect(() => {
@@ -54,7 +54,7 @@ function ProductList(props) {
                 />
 
       <div className= "product-container">
-        { filteredProducts.map(product => (<Product currentProduct ={product} key={product.id} />))} 
+        {filteredProducts.map(product => (<Product currentProduct={product} key={product.id} setToggle={ props.setToggle }/>))}
         {/* <Product currentProduct={currentProduct} /> */}
         {/* <Form products ={products}/> */}
       </div>

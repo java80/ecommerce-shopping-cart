@@ -15,16 +15,23 @@ function Form(props) {
 
 
   })
+  const history = useHistory()
+  
   const params = useParams();
   useEffect(() => {
     if (params.id) {  //check
-        const foundBook = props.products.find((product) => {
-            return product.id === params.id;
-        });
-        setProduct(foundBook.fields);
-    }
-  }, [params.id, props.products]);
+        getProductInfo()
+        }
+      
+  }, [params.id]);
   
+  async function getProductInfo() {
+    
+    const ProductUrl = `${baseURL}/${params.id}`;
+    let response = await axios.get(ProductUrl, config);
+    setProduct(response.data.fields)
+
+  }
   function handleChange(event) {
     let { value, id } = event.target;
     setProduct((prevState) => {
@@ -36,13 +43,15 @@ function Form(props) {
     if (params.id) {
       
       const updateUrl = `${baseURL}/${params.id}`;
-      await axios.put(baseURL, { fields: product }, config);
+      await axios.put(updateUrl, { fields: product }, config);
     }
     else
     {
       await axios.post(baseURL, { fields: product }, config);
     }
    
+    props.setToggle(prevState => !prevState)
+    history.push("/")
 
   }
 
@@ -62,7 +71,7 @@ function Form(props) {
           <label className="td">Image 3</label>
           <label className="td">Description</label>
         </div>
-        <form  onSubmit = {handleSubmit} className="tr" >
+        <form className="form-group"  onSubmit = {handleSubmit} className="tr" autocomplete="off" >
           <label className="td"><input type="text" name='name' id="name" value={product.name} onChange={handleChange} /></label>
           <label className="td"><input type="text" name='name' id="category" value={product.cateory} onChange={handleChange} /></label>
           <label className="td"><input type="text" name='name' id="quantity" value={product.quantity} onChange={handleChange} /></label>
@@ -71,8 +80,8 @@ function Form(props) {
           <label className="td"><input type="text" name='name' id="imgurl2" value={product.imgurl2} onChange={handleChange} /></label>
           <label className="td"><input type="text" name='name' id="imgurl3" value={product.imgurl3} onChange={handleChange} /></label>
           <label className="td"><input type="text" name='name' id="description" value={product.description} onChange={handleChange} /></label>
-          <button type="submit" >Add Product</button>
-          <button type="submit" >Edit Product</button>
+          <button className= "btn btn-primary" type="submit" >Add </button>
+         
         </form>
       </div>
     </div>
