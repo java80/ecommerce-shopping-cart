@@ -2,6 +2,7 @@ import "./Product.css";
 import {Link} from "react-router-dom"
 import { baseURL, config } from "../services";
 import axios from "axios";
+import { Container,Card} from 'react-bootstrap';
 
 function Product(props) {
   let product = props.currentProduct.fields ? props.currentProduct.fields : {};
@@ -13,7 +14,7 @@ function Product(props) {
     props.setToggle(prevState => !prevState);
 }
   return (
-     
+    <Card style={{ width: '320px' }}>
       <div id='product-list'>
       <img src={product.imgurl1} />
       <Link to={`/product/${props.currentProduct.id}`}> <h1>{product.name}</h1>  </Link>
@@ -25,7 +26,6 @@ function Product(props) {
         
                 <button className="btn btn-danger" onClick = {handleDelete}> Delete </button>
             
-
       </div>
       
       
@@ -38,7 +38,7 @@ function Product(props) {
         
       </div>
 
-
+      </Card>
    
 
   )

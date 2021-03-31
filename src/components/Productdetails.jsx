@@ -5,6 +5,7 @@ import { useState, useEffect } from "react"
 import { Link, useParams } from "react-router-dom"
 import { baseURL, config } from "../services";
 import axios from "axios"
+import { Container,Card} from 'react-bootstrap';
 
 function Productdetails() {
   let { id } = useParams();
@@ -14,26 +15,19 @@ function Productdetails() {
 
   }, [])
 
-
-
   async function getProduct() {
     let response = await axios.get(baseURL + "/" + id, config);
     setProduct(response.data);
 
   }
 
-
-
-
-
-
-
-  return product.fields ? <div>
+  return product.fields ? <Card style={{ width: '1080px' }}> <div >
     <div className="product-details">
       <div className="produt-main-image"> <img src={product.fields.imgurl1} />  </div>
       <div className="product-name-price">
         <div> <h1> {product.fields.name} </h1> </div>
-        <div> <h2> {product.fields.price} </h2></div>
+        <div> <h1>  {product.fields.price}  <button className="btn btn-primary">Add to Cart</button> </h1></div>
+        
         <div> <h3>{product.fields.description}</h3></div>
         <div> <h1>  Category:  {product.fields.category} </h1></div>
       </div>
@@ -47,7 +41,7 @@ function Productdetails() {
 
 
 
-  </div> : null;
+  </div> </Card>: null;
 }
 
 export default Productdetails;

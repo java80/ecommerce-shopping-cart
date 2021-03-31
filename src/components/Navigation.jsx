@@ -1,19 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Container} from 'react-bootstrap';
 
 
 function Navigation() {
   return (
-    <div className='nav'>
-      <ul class="nav">
-        <li> <Link to='/'>Home</Link> </li>
-        <li><Link to='/new'>All Cateogry</Link> </li>
-        <li><Link to='/new'>Promotion</Link> </li>
-        <li><Link to='/new'>New Releases</Link> </li>
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark" >
+        <ul>
+           <li> <Link to='/' class="nav-item nav-link active">Home</Link> </li> 
+          <li><Link to='/new' className="nav-item nav-link">All Cateogry</Link> </li>
+          <li><Link to='/new' className= "nav-item nav-link">Promotion</Link> </li>
+          <li><Link to='/new' className ="nav-item nav-link" >New Releases</Link> </li>
         <li className="shopping-cart"><img src="shop.png" width="50" height="50"></img> </li>
-        <li><Link to='/new'>Add </Link> </li>
-      </ul>
-    </div>
+        <li><Link to='/new' className="nav-item nav-link">Add </Link> </li>
+        
+            
+        </ul>
+        </nav>
   );
 }
 
