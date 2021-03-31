@@ -40,6 +40,9 @@
 .navbar{
 background-color: blue;
 }
+.nav ul li {
+  
+}
 .navbar ul{
   list-style-type: none;
   display: flex;
