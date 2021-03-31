@@ -1,7 +1,9 @@
 import "./Product.css";
 import {Link} from "react-router-dom"
-
-function Product(props) {
+import React from "react";
+import axios from "axios";
+import { baseURL, config } from "../services";
+function ProductBackEndList(props) {
   let product = props.currentProduct.fields ? props.currentProduct.fields : {};
  
   return (
@@ -9,17 +11,6 @@ function Product(props) {
       <div id='product-list'>
       <img src={product.imgurl1} />
       <Link to={`/product/${props.currentProduct.id}`}> <h1>{product.name}</h1>  </Link>
-      <div>
-      <Link to={`/edit/${props.currentProduct.id}`}>
-                <button>Edit</button>
-        </Link>
-        
-        <Link to={`/edit/${props.currentProduct.id}`}>
-                <button> Delete </button>
-            </Link>
-
-      </div>
-      
       
         {/* <h2>{product.category}</h2>
         <h3>{product.price}</h3>
@@ -27,6 +18,10 @@ function Product(props) {
          
         <img src={product.imgurl2} />
         <img src={product.imgurl3} /> */}
+      <Link to={`/edit/${props.currentProduct.id}`}>
+                <button>Edit</button>
+            </Link>
+      
         
       </div>
 
@@ -37,4 +32,4 @@ function Product(props) {
 
 }
 
-export default Product;
+export default ProductBackEndList;

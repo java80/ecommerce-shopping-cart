@@ -7,6 +7,7 @@ import Product from "./components/ProductList";
 import Form from "./components/Form";
 import ProductList from "./components/ProductList";
 import Productdetails from "./components/Productdetails";
+import ProductBackEndList from "./components/ProductBackEndList";
 
 function App() {
   return (
@@ -16,15 +17,16 @@ function App() {
         <ProductList />
       </Route>
       <Route path="/new">
-        <div>
-          <Form />
+        <Form />
         <ProductList />
-        </div>
       </Route>
       <Route path="/product/:id">
-    <Productdetails/>
+        <Productdetails />
       </Route>
-
+      <Route path="/edit/:id">
+      {/* <Form products={products} /> */}
+        
+      </Route>
       <Footer />
     </div>
   );

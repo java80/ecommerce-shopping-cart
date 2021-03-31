@@ -7,6 +7,7 @@ import Search from "./Search";
 import "./Product.css";
 
 
+
 function ProductList(props) {
   let [products, setProducts] = useState([]);
   let [currentProduct, setCurrentProduct] = useState({});
@@ -55,6 +56,7 @@ function ProductList(props) {
       <div className= "product-container">
         { filteredProducts.map(product => (<Product currentProduct ={product} key={product.id} />))} 
         {/* <Product currentProduct={currentProduct} /> */}
+        {/* <Form products ={products}/> */}
       </div>
 
     </div>

@@ -1,8 +1,11 @@
+
 import "./Form.css";
 import Product from "./Product";
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import axios from "axios";
 import { baseURL, config } from "../services";
+import { useHistory, useParams } from "react-router-dom";
+
 function Form(props) {
   const [product, setProduct] = useState({
     name: "", category: "", quantity: "",
@@ -12,16 +15,34 @@ function Form(props) {
 
 
   })
-
+  const params = useParams();
+  useEffect(() => {
+    if (params.id) {  //check
+        const foundBook = props.products.find((product) => {
+            return product.id === params.id;
+        });
+        setProduct(foundBook.fields);
+    }
+  }, [params.id, props.products]);
+  
   function handleChange(event) {
     let { value, id } = event.target;
     setProduct((prevState) => {
       return { ...prevState, [id]: value };
     })
   }
-  async function handeSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    await axios.post(baseURL, { fields: product }, config);
+    if (params.id) {
+      
+      const updateUrl = `${baseURL}/${params.id}`;
+      await axios.put(baseURL, { fields: product }, config);
+    }
+    else
+    {
+      await axios.post(baseURL, { fields: product }, config);
+    }
+   
 
   }
 
@@ -41,7 +62,7 @@ function Form(props) {
           <label className="td">Image 3</label>
           <label className="td">Description</label>
         </div>
-        <form  onSubmit = {handeSubmit} className="tr" >
+        <form  onSubmit = {handleSubmit} className="tr" >
           <label className="td"><input type="text" name='name' id="name" value={product.name} onChange={handleChange} /></label>
           <label className="td"><input type="text" name='name' id="category" value={product.cateory} onChange={handleChange} /></label>
           <label className="td"><input type="text" name='name' id="quantity" value={product.quantity} onChange={handleChange} /></label>
