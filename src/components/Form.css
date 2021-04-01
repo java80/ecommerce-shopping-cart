@@ -14,6 +14,7 @@ div.table
   form.tr, div.tr
   {
       display:table-row;
+     
       
   }
   label.td
@@ -26,3 +27,13 @@ div.table
     justify-content: center;
     align-items: center;
   }
+
+
+  @media screen and (max-width:700px){
+    .tr{
+     width: 636px;
+    
+    }
+    
+  }
+  

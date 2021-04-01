@@ -31,7 +31,7 @@ function Search(props) {
                 id='search'
                 value={searchTerm}
         onChange={handleChange}
-        autocomplete="off"
+        autoComplete="off"
             />
 
     </div>

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import { baseURL, config } from "../services";
 import Product from "./Product";
@@ -7,10 +6,9 @@ import Search from "./Search";
 import "./Product.css";
 
 
-
 function ProductList(props) {
   let [products, setProducts] = useState([]);
-  let [currentProduct, setCurrentProduct] = useState({});
+  //let [currentProduct, setCurrentProduct] = useState({});
   let [searchTerm, setSearchTerm] = useState("");
   let [filteredProducts, setFilteredProducts] = useState([]);
   useEffect(() => {
@@ -38,8 +36,8 @@ function ProductList(props) {
   async function getProduct() {
     let response = await axios.get(baseURL, config);
     setProducts(response.data.records);
-    setCurrentProduct(response.data.records);
-    console.log(response.data);
+    //setCurrentProduct(response.data.records);
+ 
     setFilteredProducts(response.data.records);
   }
 

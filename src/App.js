@@ -1,14 +1,10 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Route } from "react-router-dom";
-import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
-import Product from "./components/ProductList";
 import Form from "./components/Form";
 import ProductList from "./components/ProductList";
 import Productdetails from "./components/Productdetails";
-import ProductBackEndList from "./components/ProductBackEndList";
 import { Container} from 'react-bootstrap';
 import { useState } from "react";
 

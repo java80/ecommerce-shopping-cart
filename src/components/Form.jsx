@@ -1,11 +1,9 @@
-
 import "./Form.css";
-import Product from "./Product";
 import { useState, useEffect} from "react";
 import axios from "axios";
 import { baseURL, config } from "../services";
 import { useHistory, useParams } from "react-router-dom";
-import { Container } from "react-bootstrap";
+// import { Container } from "react-bootstrap";
 
 function Form(props) {
   const [product, setProduct] = useState({
@@ -23,7 +21,7 @@ function Form(props) {
     if (params.id) {  //check
         getProductInfo()
         }
-      
+      // eslint-disable-next-line
   }, [params.id]);
   
   async function getProductInfo() {
@@ -59,10 +57,10 @@ function Form(props) {
   
 
   return (
-   
+    
     <div className="table-container">
-      <div className="table">
-      <thead class="thead-dark">
+     {/* <!-- <div className="table"> --> */}
+      {/* <thead class="thead-dark">
         <div className="tr">
           <label className="td">Product Name</label>
           <label className="td">Category</label>
@@ -73,20 +71,20 @@ function Form(props) {
           <label className="td">Image 3</label>
           <label className="td">Description</label>
           </div>
-          </thead>
-        <form className="form-group"  onSubmit = {handleSubmit} className="tr" autocomplete="off" >
-          <label className="td"><input type="text" name='name' id="name" value={product.name} onChange={handleChange} /></label>
-          <label className="td"><input type="text" name='name' id="category" value={product.category} onChange={handleChange} /></label>
-          <label className="td"><input type="text" maxlength="5" size = "5" name='name' id="quantity" value={product.quantity} onChange={handleChange} /></label>
-          <label className="td"><input type="text" maxlength="5" size = "5" name='name' id="price" value={product.price} onChange={handleChange} /></label>
-          <label className="td"><input type="text" name='name' id="imgurl1" value={product.imgurl1} onChange={handleChange} /></label>
-          <label className="td"><input type="text" name='name' id="imgurl2" value={product.imgurl2} onChange={handleChange} /></label>
-          <label className="td"><input type="text" name='name' id="imgurl3" value={product.imgurl3} onChange={handleChange} /></label>
-          <label className="td"><input type="text" name='name' id="description" value={product.description} onChange={handleChange} /></label>
+          </thead> */}
+        <form className="form-group"  onSubmit = {handleSubmit} className="tr" autoComplete="off" >
+          <label className="td">Name<input type="text" name='name' id="name" value={product.name} onChange={handleChange} /></label>
+          <label className="td"> Product name <input type="text" name='name' id="category" value={product.category} onChange={handleChange} /></label>
+          <label className="td"> Quantity<input type="text" maxLength="5" size = "5" name='name' id="quantity" value={product.quantity} onChange={handleChange} /></label>
+          <label className="td"> Price<input type="text" maxLength="5" size = "5" name='name' id="price" value={product.price} onChange={handleChange} /></label>
+          <label className="td"> Image 1<input type="text" name='name' id="imgurl1" value={product.imgurl1} onChange={handleChange} /></label>
+          <label className="td"> Image 2<input type="text" name='name' id="imgurl2" value={product.imgurl2} onChange={handleChange} /></label>
+          <label className="td"> Image 3<input type="text" name='name' id="imgurl3" value={product.imgurl3} onChange={handleChange} /></label>
+          <label className="td"> Description<input type="text" name='name' id="description" value={product.description} onChange={handleChange} /></label>
           <button className= "btn btn-primary" type="submit" >Add </button>
          
         </form>
-      </div>
+     {/* <!-- </div> --> */}
     </div>
     
 

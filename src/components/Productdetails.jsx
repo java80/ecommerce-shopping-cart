@@ -2,17 +2,17 @@ import React from "react";
 import "./Product.css";
 import "./Productdetails.css";
 import { useState, useEffect } from "react"
-import { Link, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { baseURL, config } from "../services";
 import axios from "axios"
-import { Container,Card} from 'react-bootstrap';
+import { Card} from 'react-bootstrap';
 
 function Productdetails() {
   let { id } = useParams();
   const [product, setProduct] = useState({})
   useEffect(() => {
     getProduct();
-
+   // eslint-disable-next-line
   }, [])
 
   async function getProduct() {
@@ -21,9 +21,9 @@ function Productdetails() {
 
   }
 
-  return product.fields ? <Card style={{ width: '1080px' }}> <div >
+  return product.fields ? <Card > <div >
     <div className="product-details">
-      <div className="produt-main-image"> <img src={product.fields.imgurl1} />  </div>
+      <div className="produt-main-image"> <img alt ={product.fields.name} src={product.fields.imgurl1} />  </div>
       <div className="product-name-price">
         <div> <h1> {product.fields.name} </h1> </div>
         <div> <h1>  {product.fields.price}  <button className="btn btn-primary">Add to Cart</button> </h1></div>
@@ -34,9 +34,9 @@ function Productdetails() {
     </div>
 
     <div className="hover-image">
-      <div> <img src={product.fields.imgurl1} />  </div>
-      <div> <img src={product.fields.imgurl1} />  </div>
-      <div> <img src={product.fields.imgurl1} />  </div>
+      <div> <img alt ={product.fields.name} src={product.fields.imgurl1} />  </div>
+      <div> <img alt ={product.fields.name} src={product.fields.imgurl1} />  </div>
+      <div> <img alt ={product.fields.name}  src={product.fields.imgurl1} />  </div>
     </div>
 
 
