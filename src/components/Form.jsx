@@ -3,7 +3,6 @@ import { useState, useEffect} from "react";
 import axios from "axios";
 import { baseURL, config } from "../services";
 import { useHistory, useParams } from "react-router-dom";
-// import { Container } from "react-bootstrap";
 
 function Form(props) {
   const [product, setProduct] = useState({
@@ -18,10 +17,9 @@ function Form(props) {
   
   const params = useParams();
   useEffect(() => {
-    if (params.id) {  //check
+    if (params.id) {  
         getProductInfo()
         }
-      // eslint-disable-next-line
   }, [params.id]);
   
   async function getProductInfo() {
@@ -59,19 +57,6 @@ function Form(props) {
   return (
     
     <div className="table-container">
-     {/* <!-- <div className="table"> --> */}
-      {/* <thead class="thead-dark">
-        <div className="tr">
-          <label className="td">Product Name</label>
-          <label className="td">Category</label>
-          <label className="td">Quantity</label>
-          <label className="td">Price</label>
-          <label className="td">Image 1</label>
-          <label className="td">Image 2</label>
-          <label className="td">Image 3</label>
-          <label className="td">Description</label>
-          </div>
-          </thead> */}
         <form className="form-group"  onSubmit = {handleSubmit} className="tr" autoComplete="off" >
           <label className="td">Name<input type="text" name='name' id="name" value={product.name} onChange={handleChange} /></label>
           <label className="td"> Product name <input type="text" name='name' id="category" value={product.category} onChange={handleChange} /></label>
@@ -84,17 +69,7 @@ function Form(props) {
           <button className= "btn btn-primary" type="submit" >Add </button>
          
         </form>
-     {/* <!-- </div> --> */}
     </div>
-    
-
-
-
-
-
-
-
-
 
   )
 

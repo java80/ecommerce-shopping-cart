@@ -10,21 +10,10 @@ function ProductBackEndList(props) {
       <img src={product.imgurl1} />
       <Link to={`/product/${props.currentProduct.id}`}> <h1>{product.name}</h1>  </Link>
 
-      {/* <h2>{product.category}</h2>
-        <h3>{product.price}</h3>
-        <h2>{product.description}</h2>
-         
-        <img src={product.imgurl2} />
-        <img src={product.imgurl3} /> */}
       <Link to={`/edit/${props.currentProduct.id}`}>
         <button>Edit</button>
       </Link>
-
-
     </div>
-
-
-
 
   )
 

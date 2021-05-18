@@ -6,7 +6,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from "react-router-dom";
 
-// Put any other imports below so that CSS from your
 
 ReactDOM.render(
   <React.StrictMode>

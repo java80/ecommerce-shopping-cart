@@ -27,20 +27,11 @@ function Product(props) {
                 <button className="btn btn-danger" onClick = {handleDelete}> Delete </button>
             
       </div>
-      
-      
-        {/* <h2>{product.category}</h2>
-        <h3>{product.price}</h3>
-        <h2>{product.description}</h2>
-         
-        <img src={product.imgurl2} />
-        <img src={product.imgurl3} /> */}
         
       </div>
 
       </Card>
    
-
   )
 
 }

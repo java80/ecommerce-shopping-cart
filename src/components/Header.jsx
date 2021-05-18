@@ -2,8 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Header() {
-  return (
-      
+  return (  
     <div>
       <nav className="navbar navbar-expand-md navbar-dark bg-dark" >
         <ul>
@@ -15,9 +14,7 @@ function Header() {
         <li><Link to='/new'>Add </Link> </li>
         </ul>
         </nav>
-        </div>
-
-        
+        </div>   
     );
 }
 
