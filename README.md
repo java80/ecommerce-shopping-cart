@@ -151,7 +151,7 @@ The client will be able to do the following:
 
 ### Strengths:
 
-- Use of React Js to for frontend 
+- Use of React Js to build the frontend 
 
 
 ### Weaknesses:
