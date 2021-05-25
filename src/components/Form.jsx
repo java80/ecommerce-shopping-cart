@@ -20,7 +20,7 @@ function Form(props) {
     if (params.id) {  
         getProductInfo()
         }
-  }, [params.id]);
+  });
   
   async function getProductInfo() {
     
@@ -57,7 +57,7 @@ function Form(props) {
   return (
     
     <div className="table-container">
-        <form className="form-group"  onSubmit = {handleSubmit} className="tr" autoComplete="off" >
+        <form className="form-group"  onSubmit = {handleSubmit}  autoComplete="off" >
           <label className="td">Name<input type="text" name='name' id="name" value={product.name} onChange={handleChange} /></label>
           <label className="td"> Product name <input type="text" name='name' id="category" value={product.category} onChange={handleChange} /></label>
           <label className="td"> Quantity<input type="text" maxLength="5" size = "5" name='name' id="quantity" value={product.quantity} onChange={handleChange} /></label>
