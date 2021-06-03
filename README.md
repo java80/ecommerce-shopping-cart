@@ -49,7 +49,7 @@ The client will be able to do the following:
     <td><img src="Images-for-javascript/component.png" width=1080 height=1000></td>
      </tr>
  </table>
-
+ 
 ## API and Data Sample
 
 ```json
@@ -101,6 +101,7 @@ The client will be able to do the following:
     "offset": "recL5Lclb4v9qWsvs"
 }
 
+
 ```
 
 ### MVP/PostMVP
@@ -147,6 +148,8 @@ The client will be able to do the following:
 | Total              |    H     |      12 hrs      |        25hrs         |   25hr          |
 
 
+## Dependency
+https://www.npmjs.com/package/validator
 ## SWOT Analysis
 
 ### Strengths:
