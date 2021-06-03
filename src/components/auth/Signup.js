@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TextFieldGroup from "../Textfield/TextFieldGroup";
+import TextFieldGroup from "./commonFields/TextFieldGroup";
 import axios from "axios";
 const Signup = (props) => {
   const [name, setName] = useState("");
