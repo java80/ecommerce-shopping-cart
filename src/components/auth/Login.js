@@ -11,11 +11,11 @@ const Login = (props) => {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
 
-  const onemailChange = (e) => {
+  const onEmailChange = (e) => {
     setEmail(e.target.value);
   };
 
-  const onpasswordChange = (e) => {
+  const onPasswordChange = (e) => {
     setPassword(e.target.value);
   };
 
@@ -57,7 +57,7 @@ const Login = (props) => {
                 type="email"
                 name="email"
                 value={email}
-                onChange={onemailChange}
+                onChange={onEmailChange}
                 error={errors.email}
               />
               <TextFieldGroup
@@ -65,7 +65,7 @@ const Login = (props) => {
                 type="password"
                 name="password"
                 value={password}
-                onChange={onpasswordChange}
+                onChange={onPasswordChange}
                 error={errors.password}
               />
 

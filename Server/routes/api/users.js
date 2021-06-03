@@ -11,11 +11,11 @@ const validateLoginInput = require("../../validation/login");
 router.get("/test", (req, res) => res.json({ msg: "Users work" }));
 
 router.post("/register", (req, res) => {
+  const { errors, isValid } = validateRegisterInput(req.body);
+  if (!isValid) {
+    return res.status(400).json(errors);
+  }
   User.findOne({ email: req.body.email }).then((user) => {
-    const { errors, isValid } = validateRegisterInput(req.body);
-    if (!isValid) {
-      return res.status(400).json(errors);
-    }
     if (user) {
       errors.email = "Email already exists";
       return res.status(400).json(errors);
@@ -51,16 +51,18 @@ router.post("/login", (req, res) => {
     return res.status(400).json(errors);
   }
   const email = req.body.email;
-  const password = req.body.passwor;
-  // Find user by email
+  const password = req.body.password;
+
+  //Find user by email
   User.findOne({ email }).then((user) => {
     if (!user) {
       errors.email = "User not found";
       return res.status(404).json(errors);
     }
-    //check password
+    //Check password
     bcrypt.compare(password, user.password).then((isMatch) => {
       if (isMatch) {
+        //User matched
         const payload = { id: user.id, name: user.name, avatar: user.avatar };
         jwt.sign(
           payload,
