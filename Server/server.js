@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const passport = require("passport");
-
+const users = require("./routes/api/users");
 const app = express();
 app.use(cors());
 
@@ -19,6 +19,7 @@ mongoose
   .catch((err) => console.log(err));
 app.get("/", (req, res) => res.send("Hello ike"));
 app.use(passport.initialize());
-
-const port = process.env.PORT || 5000;
+require("./Config/passport")(passport);
+app.use("/api/users", users);
+const port = process.env.PORT || 2000;
 app.listen(port, () => console.log(`server running on port ${port}`));
