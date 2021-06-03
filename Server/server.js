@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const passport = require("passport");
 
 const app = express();
 app.use(cors());
@@ -17,6 +18,7 @@ mongoose
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 app.get("/", (req, res) => res.send("Hello ike"));
+app.use(passport.initialize());
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`server running on port ${port}`));

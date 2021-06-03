@@ -1,3 +1,5 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
 import "./Product.css";
 import {Link} from "react-router-dom"
 import { baseURL, config } from "../services";

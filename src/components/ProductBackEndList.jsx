@@ -1,6 +1,8 @@
+import React from "react";
+import ReactDOM from 'react-dom'
 import "./Product.css";
 import { Link } from "react-router-dom"
-import React from "react";
+
 function ProductBackEndList(props) {
   let product = props.currentProduct.fields ? props.currentProduct.fields : {};
 
