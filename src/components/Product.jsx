@@ -1,41 +1,52 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import { useContext } from "react";
 import "./Product.css";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 import { baseURL, config } from "../services";
 import axios from "axios";
-import {Card} from 'react-bootstrap';
+import { AppContext } from "../AppContext";
+import { Card } from "react-bootstrap";
 
 function Product(props) {
+  const { JwtToken, adminEmail } = useContext(AppContext);
   let product = props.currentProduct.fields ? props.currentProduct.fields : {};
- 
+
   async function handleDelete() {
-  
-    let ProductUrl = `${baseURL}/${props.currentProduct.id}`
+    let ProductUrl = `${baseURL}/${props.currentProduct.id}`;
     await axios.delete(ProductUrl, config);
-    props.setToggle(prevState => !prevState);
-}
+    props.setToggle((prevState) => !prevState);
+  }
+
   return (
-    <Card style={{ width: '320px' }}>
-      <div id='product-list'>
-        <img alt={product.name}src={product.imgurl1} />
-      <Link to={`/product/${props.currentProduct.id}`}> <h1>{product.name}</h1>  </Link>
-      <div>
-      <Link to={`/edit/${props.currentProduct.id}`}>
-                <button className= "btn btn-primary">Edit</button>
-        </Link>
-        
-        
-                <button className="btn btn-danger" onClick = {handleDelete}> Delete </button>
-            
-      </div>
-        
-      </div>
 
-      </Card>
-   
-  )
-
+    <>
+      <div className="card" style={{ width: "18rem" }}>
+        <img
+          className="card-img-top"
+          src={product.imgurl1}
+          alt="Card cap"
+        />
+        <div className="card-body">
+          <Link to={`/product/${props.currentProduct.id}`}>
+            <h5 className="card-title">{product.name}</h5>
+          </Link>
+          <p className="card-text">{product.description}</p>
+          <a href="#" className="btn btn-primary mb-2">
+            Add to cart
+          </a>
+          {JwtToken && adminEmail === "ikeekedede@gmail.com" && (
+            <div>
+              <Link to={`/edit/${props.currentProduct.id}`}>
+                <button className="btn btn-primary mr-3">Edit</button>
+              </Link>
+              <button className="btn btn-danger" onClick={handleDelete}>
+                Delete
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default Product;
