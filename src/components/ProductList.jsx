@@ -49,8 +49,8 @@ function ProductList(props) {
       <Card
         border="info"
         style={{
-          width: "26rem",
-          height: "23rem",
+          width: "30rem",
+          height: "26rem",
           margin: "0 auto",
           marginBottom: "26px",
         }}
@@ -65,7 +65,7 @@ function ProductList(props) {
               paddingRight: "68px",
               marginLeft: "-19px",
             }}
-            src="https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHNob3BwaW5nJTIwY2FydHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+            src="https://sc04.alicdn.com/kf/H615aab5bb469448e82123029ab2665bfA.jpg"
             alt=""
           />
         </Card.Header>

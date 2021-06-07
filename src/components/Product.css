@@ -1,21 +1,20 @@
-
-.product-container{
-  column-count: 4;
-  
-} 
-
-#product-list div {
+.product-container {
   
 }
+.search-container {
+  margin-bottom: 10px;
+}
+.products-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 #product-list img {
   height: 200px;
   width: 200px;
 }
-
-@media screen and (max-width:700px){
-  .product-container{ 
-    column-count: 2;
-  }
-  
+@media screen and (max-width: 700px) {
+ 
 }
-
