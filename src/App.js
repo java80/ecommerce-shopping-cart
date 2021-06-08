@@ -30,8 +30,8 @@ function App() {
         setAdminEmail,
       }}
     >
-      <Container fluid>
-        <div className="App">
+      
+        <div className="container">
           <Navigation />
 
           <Route exact path="/">
@@ -51,7 +51,7 @@ function App() {
           <Route path="/signup" component={Signup} />
           <Footer />
         </div>
-      </Container>
+      
       </AppContext.Provider>
     
   );

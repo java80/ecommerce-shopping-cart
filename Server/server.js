@@ -21,5 +21,5 @@ app.get("/", (req, res) => res.send("Hello ike"));
 app.use(passport.initialize());
 require("./Config/passport")(passport);
 app.use("/api/users", users);
-const port = process.env.PORT || 2000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`server running on port ${port}`));

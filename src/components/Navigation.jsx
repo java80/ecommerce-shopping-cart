@@ -7,8 +7,8 @@ function Navigation() {
   const { JwtToken, adminEmail } = useContext(AppContext);
 
   return (
-    <nav className="navbar justify-content-center navbar-dark ">
-      <ul>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light ">
+      <ul className="list-nav">
         <li>
           <Link to="/" className="nav-item nav-link active">
             Home
@@ -20,12 +20,12 @@ function Navigation() {
           </Link>
         </li>
         <li>
-          <Link to="/new" className="nav-item nav-link">
+          <Link to="/" className="nav-item nav-link">
             Promotion
           </Link>
         </li>
         <li>
-          <Link to="/new" className="nav-item nav-link">
+          <Link to="/" className="nav-item nav-link">
             New Releases
           </Link>
         </li>
