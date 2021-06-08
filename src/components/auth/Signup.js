@@ -9,32 +9,34 @@ const Signup = (props) => {
   const [errors, setErrors] = useState({});
   const oNNameChange = (e) => {
     setName(e.target.value);
-  }
+  };
 
   const onEmailChange = (e) => {
     setEmail(e.target.value);
-  }
+  };
   const onPasswordChange = (e) => {
     setPassword(e.target.value);
-  }
+  };
   const onPasswordConfirmChange = (e) => {
     setPasswordConfirm(e.target.value);
-  }
+  };
   const onSubmit = (e) => {
     e.preventDefault();
     const newUser = { name, email, password, passwordConfirm };
     console.log(newUser);
-    registerUser(newUser, props.history)
-    
-  }
+    registerUser(newUser, props.history);
+  };
 
   const registerUser = (userData, history) => {
     axios
-      .post("http://localhost:2000/api/users/register", userData)
-      .then((res) => { console.log(res); history.push("/login") })
-      .catch(
-        (err) => { setErrors(err.response.data); console.log(err) }
-      )
+      .post("http://localhost:3001/api/users/register", userData)
+      .then((res) => {
+        console.log(res);
+        history.push("/login");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <div className="register">
@@ -87,7 +89,5 @@ const Signup = (props) => {
       </div>
     </div>
   );
-
-
 };
-export default Signup
+export default Signup;

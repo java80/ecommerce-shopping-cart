@@ -7,12 +7,12 @@
 .products-container {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
 #product-list img {
-  height: 200px;
+  height: 400px;
   width: 200px;
 }
 @media screen and (max-width: 700px) {

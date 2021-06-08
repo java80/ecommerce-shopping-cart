@@ -29,7 +29,7 @@ const Login = (props) => {
 
   const registerUser = (userData, history) => {
     axios
-      .post("http://localhost:2000/api/users/login", userData)
+      .post("http://localhost:3001/api/users/login", userData)
       .then((res) => {
         console.log(res);
         setJwtToken(res.data.token);
@@ -38,7 +38,7 @@ const Login = (props) => {
       })
       .catch((err) => {
         console.log(err);
-        setErrors(err.response.data);
+       
       });
   };
 
