@@ -18,3 +18,13 @@
 @media screen and (max-width: 700px) {
  
 }
+.feature-basket{
+  display: flex;
+  justify-content: space-between;
+}
+.feature-basket.center{
+  align-items: center;
+}
+.block {
+  background-color: blue;
+}

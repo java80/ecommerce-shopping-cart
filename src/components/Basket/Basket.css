@@ -1,0 +1,8 @@
+.checkout{
+  background-color: red;
+  margin:100px;
+  border-style: dashed;
+  height: 500px;
+  width: 400px;
+  align-items: center;
+}

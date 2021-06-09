@@ -17,19 +17,15 @@ function Product(props) {
   }
 
   return (
-
     <>
       <div className="card" style={{ width: "18rem" }}>
-        <img
-          className="card-img-top"
-          src={product.imgurl1}
-          alt="Card cap"
-        />
+        <img className="card-img-top" src={product.imgurl1} alt="Card cap" />
         <div className="card-body">
           <Link to={`/product/${props.currentProduct.id}`}>
             <h5 className="card-title">{product.name}</h5>
           </Link>
           <p className="card-text">{product.description}</p>
+          <p className="card-text">{product.price}</p>
           <a href="#" className="btn btn-primary mb-2">
             Add to cart
           </a>

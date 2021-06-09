@@ -12,16 +12,13 @@ import Signup from "./components/auth/Signup";
 import { AppContext } from "./AppContext";
 
 import "./App.css";
+import Basket from "./components/Basket/Basket";
 
 function App() {
   const [toggle, setToggle] = useState(false);
   const [JwtToken, setJwtToken] = useState(undefined);
   const [adminEmail, setAdminEmail] = useState(undefined);
   return (
-  
-
-
-   
     <AppContext.Provider
       value={{
         JwtToken,
@@ -30,30 +27,30 @@ function App() {
         setAdminEmail,
       }}
     >
-      
-        <div className="container">
-          <Navigation />
+      <div className="container">
+        <Navigation />
 
-          <Route exact path="/">
-            <ProductList toggle={toggle} setToggle={setToggle} />
-          </Route>
-          <Route path="/new">
-            <Form toggle={toggle} setToggle={setToggle} />
-            <ProductList toggle={toggle} setToggle={setToggle} />
-          </Route>
-          <Route path="/product/:id">
-            <Productdetails />
-          </Route>
-          <Route path="/edit/:id">
-            <Form toggle={toggle} setToggle={setToggle} />
-          </Route>
-          <Route path="/login" component={Login} />
-          <Route path="/signup" component={Signup} />
-          <Footer />
-        </div>
-      
-      </AppContext.Provider>
-    
+        <Route exact path="/">
+          
+          <ProductList toggle={toggle} setToggle={setToggle} />
+        </Route>
+
+        <Route path="/new">
+          <Form toggle={toggle} setToggle={setToggle} />
+          <ProductList toggle={toggle} setToggle={setToggle} />
+        </Route>
+        
+        <Route path="/product/:id">
+          <Productdetails />
+        </Route>
+        <Route path="/edit/:id">
+          <Form toggle={toggle} setToggle={setToggle} />
+        </Route>
+        <Route path="/login" component={Login} />
+        <Route path="/signup" component={Signup} />
+        <Footer />
+      </div>
+    </AppContext.Provider>
   );
 }
 

@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { i } from "react-bootstrap";
 import "./Navigation.css";
 import { AppContext } from "../AppContext";
 
@@ -16,7 +17,7 @@ function Navigation() {
         </li>
         <li>
           <Link to="/new" className="nav-item nav-link">
-            All Category
+            Category
           </Link>
         </li>
         <li>
@@ -49,6 +50,7 @@ function Navigation() {
         </li>
         <li className="shopping-cart">
           <img src="shop.png" alt="shoppingcart" width="50" height="50"></img>{" "}
+          
         </li>
       </ul>
     </nav>
