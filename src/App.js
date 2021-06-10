@@ -18,6 +18,7 @@ function App() {
   const [toggle, setToggle] = useState(false);
   const [JwtToken, setJwtToken] = useState(undefined);
   const [adminEmail, setAdminEmail] = useState(undefined);
+  const [cartItems, setCartItems] = useState([]);
   return (
     <AppContext.Provider
       value={{
@@ -25,6 +26,8 @@ function App() {
         adminEmail,
         setJwtToken,
         setAdminEmail,
+        cartItems,
+        setCartItems
       }}
     >
       <div className="container">

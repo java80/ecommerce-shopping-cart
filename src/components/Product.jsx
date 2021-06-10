@@ -7,7 +7,7 @@ import { AppContext } from "../AppContext";
 import { Card } from "react-bootstrap";
 
 function Product(props) {
-  const { JwtToken, adminEmail } = useContext(AppContext);
+  const { JwtToken, adminEmail,cartItems,setCartItems} = useContext(AppContext);
   let product = props.currentProduct.fields ? props.currentProduct.fields : {};
 
   async function handleDelete() {
@@ -15,7 +15,17 @@ function Product(props) {
     await axios.delete(ProductUrl, config);
     props.setToggle((prevState) => !prevState);
   }
-
+  const updateCartItems = () => {
+    console.log("cart click");
+    const cartItem = {
+      img: product.imgurl1,
+      name: product.name,
+      price: product.price,
+      
+    }
+    const cartItemsArray = [...cartItems,cartItem]
+    setCartItems(cartItemsArray)
+ }
   return (
     <>
       <div className="card" style={{ width: "18rem" }}>
@@ -26,7 +36,7 @@ function Product(props) {
           </Link>
           <p className="card-text">{product.description}</p>
           <p className="card-text">{product.price}</p>
-          <a href="#" className="btn btn-primary mb-2">
+          <a href="#" className="btn btn-primary mb-2" onClick={updateCartItems}>
             Add to cart
           </a>
           {JwtToken && adminEmail === "ikeekedede@gmail.com" && (

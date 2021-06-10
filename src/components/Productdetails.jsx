@@ -59,10 +59,10 @@ function Productdetails() {
             <img alt={product.fields.name} src={product.fields.imgurl1} />
           </div>
           <div className="product-small-images">
-            <img alt={product.fields.name} src={product.fields.imgurl1} />
+            <img alt={product.fields.name} src={product.fields.imgurl2} />
           </div>
           <div className="product-small-images">
-            <img alt={product.fields.name} src={product.fields.imgurl1} />
+            <img alt={product.fields.name} src={product.fields.imgurl3} />
           </div>
         </div>
       </div>
