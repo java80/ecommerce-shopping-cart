@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { AppContext } from "../../AppContext"
 import "./Basket.css";
+import CartItem from "../CartItem/CartItem"
 const Basket = () => {
 
   const { cartItems } = useContext(AppContext);
@@ -19,6 +20,13 @@ const Basket = () => {
       </div>
 
       <div className="cart-navbar-body">
+        {/* <CartItem /> */}
+        {cartItems.length > 0 ? cartItems.map(() => {
+          
+          return (
+            <CartItem/>
+          )
+        }) : <h1> Cart is Empty</h1>}
         
       </div>
     </div>
