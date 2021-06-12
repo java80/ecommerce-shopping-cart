@@ -9,7 +9,7 @@ import { Card } from "react-bootstrap";
 function Product(props) {
   let { JwtToken, adminEmail, cartItems, setCartItems, onAdd, cartItemCounter, setCartItemCounter } = useContext(AppContext);
   let product = props.currentProduct.fields ? props.currentProduct.fields : {};
-  console.log("product ", props.currentProduct)
+  //console.log("product ", props.currentProduct)
   //console.log("cart item counter ",cartItemCounter)
   async function handleDelete() {
     let ProductUrl = `${baseURL}/${props.currentProduct.id}`;
@@ -17,7 +17,7 @@ function Product(props) {
     props.setToggle((prevState) => !prevState);
   }
   const updateCartItems = () => {
-    console.log("cart click");
+    //console.log("cart click");
     const cartItem = {
       img: product.imgurl1,
       name: product.name,
@@ -38,7 +38,7 @@ function Product(props) {
           </Link>
           <p className="card-text">{product.description}</p>
           <p className="card-text">{product.price}</p>
-          <a href="#" className="btn btn-primary mb-2" onClick={()=> onAdd(product)}>
+          <a href="#" className="btn btn-primary mb-2" onClick={()=> onAdd(props.currentProduct)}>
             Add to cart
           </a>
           {JwtToken && adminEmail === "ikeekedede@gmail.com" && (

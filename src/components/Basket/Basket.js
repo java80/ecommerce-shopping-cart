@@ -6,6 +6,8 @@ const Basket = () => {
 
   const { cartItems} = useContext(AppContext);
   
+  console.log("cart items", cartItems)
+  const itemPrice = cartItems.reduce((a,c)=> a+c.qty*c.fields.price,0)
   const addToCart = (product) => {
     
 
@@ -30,7 +32,7 @@ const Basket = () => {
         )}
         <div className="sub-total">
           <p className="total-items"> # of Items {cartItems.length}</p>
-          <p className="grand-total">subtotal{ }</p>
+          <p className="grand-total">subtotal ${itemPrice } </p>
         </div>
       </div>
     </div>
