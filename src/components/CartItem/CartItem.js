@@ -1,26 +1,47 @@
-import { usestate, useContext } from 'react';
+import { usestate, useContext, useState } from 'react';
 import { AppContext } from "../../AppContext";
-const CartItem = () => {
+import Product from '../Product';
+const CartItem = ({ item }) => {
+  let { cartItemCounter, setCartItemCounter } = useContext(AppContext);
+  let [singleItemCounter, setSingleItemCounter] = useState(1)
+  console.log(item);
+  const handleIncement = () => {
+    
+    setSingleItemCounter(++singleItemCounter)
+    console.log("increment ", singleItemCounter);
+  }
+  
+  const handleDecrement = () => {
 
+
+    setSingleItemCounter(singleItemCounter===1 ? 1 : --singleItemCounter);
+    
+  };
+  
 
   return (
     <div className="cart-navbar-row">
       <div className="cart-image-price">
         <img
-          src=" https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+          src={item.img}
           alt=""
           style={{ width: "50px", height: "50px" }}
           className="cart-product-image"
         />
-        <p className="cart-unit-name"> cloths</p>
+        <p className="cart-unit-name"> {item.name}</p>
       </div>
-      <p className="cart-unit-price"> $5</p>
+      <p className="cart-unit-price"> {item.price}</p>
       <div className="cart-product-quanity">
-        <div className="cart-product-increment">+</div>
-        <div className="cart-product-counter">0</div>
-        <div className="cart-product-decrement">-</div>
+        <div className="cart-product-increment" onClick={handleDecrement}>
+          -
+        </div>
+        <div className="cart-product-counter">{singleItemCounter}</div>
+        <div className="cart-product-decrement" onClick={handleIncement}>
+          +
+        </div>
       </div>
-      <div className="cart-subtotal">300</div>
+      <div className="cart-subtotal">{item.price * singleItemCounter}</div>
+     
     </div>
   );
 

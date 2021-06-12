@@ -4,8 +4,8 @@ import "./Basket.css";
 import CartItem from "../CartItem/CartItem"
 const Basket = () => {
 
-  const { cartItems } = useContext(AppContext);
-  console.log(cartItems)
+  const { cartItems} = useContext(AppContext);
+  
   const addToCart = (product) => {
     
 
@@ -21,13 +21,17 @@ const Basket = () => {
 
       <div className="cart-navbar-body">
         {/* <CartItem /> */}
-        {cartItems.length > 0 ? cartItems.map(() => {
-          
-          return (
-            <CartItem/>
-          )
-        }) : <h1> Cart is Empty</h1>}
-        
+        {cartItems.length > 0 ? (
+          cartItems.map((item, index) => {
+            return <CartItem key={index} item={item} />;
+          })
+        ) : (
+          <h1> Cart is Empty</h1>
+        )}
+        <div className="sub-total">
+          <p className="total-items"> # of Items {cartItems.length}</p>
+          <p className="grand-total">subtotal{ }</p>
+        </div>
       </div>
     </div>
   );

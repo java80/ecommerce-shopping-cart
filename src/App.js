@@ -19,6 +19,40 @@ function App() {
   const [JwtToken, setJwtToken] = useState(undefined);
   const [adminEmail, setAdminEmail] = useState(undefined);
   const [cartItems, setCartItems] = useState([]);
+  let [cartItemCounter, setCartItemCounter] = useState(0)
+  const onAdd = (product) => {
+    const existing = cartItems.find((item) => item.id === product.id)
+    if (existing) {
+      setCartItems(
+        cartItems.map((item) =>
+          item.id === product.id ? { ...existing, qty: existing.qty + 1 } : item
+          
+        )
+      )
+    }
+    else {
+      setCartItems([...cartItems, {...product, qty: 1}])
+    }
+  }
+
+  const onRemove = (product) => {
+    const existing = cartItems.find((item) => item.id === product.id);
+    if (existing.qty === 1) {
+      setCartItems(
+        cartItems.filter((item) =>
+          item.id !== product.id
+        )
+      )
+    }
+    else
+    {
+      setCartItems(cartItems.map((item) => 
+       item.id === product.id ? {...existing, qty: existing.qty -1 } :item
+      )
+      )
+      }
+
+  }
   return (
     <AppContext.Provider
       value={{
@@ -27,7 +61,11 @@ function App() {
         setJwtToken,
         setAdminEmail,
         cartItems,
-        setCartItems
+        setCartItems,
+        cartItemCounter,
+        setCartItemCounter,
+        onAdd,
+        onRemove
       }}
     >
       <div className="container">

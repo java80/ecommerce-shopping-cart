@@ -7,9 +7,10 @@ import { AppContext } from "../AppContext";
 import { Card } from "react-bootstrap";
 
 function Product(props) {
-  const { JwtToken, adminEmail,cartItems,setCartItems} = useContext(AppContext);
+  let { JwtToken, adminEmail, cartItems, setCartItems, onAdd, cartItemCounter, setCartItemCounter } = useContext(AppContext);
   let product = props.currentProduct.fields ? props.currentProduct.fields : {};
-
+  console.log("product ", props.currentProduct)
+  //console.log("cart item counter ",cartItemCounter)
   async function handleDelete() {
     let ProductUrl = `${baseURL}/${props.currentProduct.id}`;
     await axios.delete(ProductUrl, config);
@@ -23,7 +24,8 @@ function Product(props) {
       price: product.price,
       
     }
-    const cartItemsArray = [...cartItems,cartItem]
+    const cartItemsArray = [...cartItems, cartItem]
+    setCartItemCounter(++cartItemCounter);
     setCartItems(cartItemsArray)
  }
   return (
@@ -36,7 +38,7 @@ function Product(props) {
           </Link>
           <p className="card-text">{product.description}</p>
           <p className="card-text">{product.price}</p>
-          <a href="#" className="btn btn-primary mb-2" onClick={updateCartItems}>
+          <a href="#" className="btn btn-primary mb-2" onClick={()=> onAdd(product)}>
             Add to cart
           </a>
           {JwtToken && adminEmail === "ikeekedede@gmail.com" && (
