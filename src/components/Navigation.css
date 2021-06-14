@@ -4,7 +4,22 @@
   
 }  
 
-
+.basket-counter{
+  display:inline-block;
+  width: 30px;
+  border-radius: 50%;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 16px;
+  background:red;
+  position: absolute;
+    top: -16px;
+    left: 9px;
+}
+.shopping-cart {
+  position: relative;
+}
 @media screen and (max-width:700px){
   .navbar{
     font-size: 40px !important;

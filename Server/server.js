@@ -14,13 +14,13 @@ app.use(bodyParser.json());
 const db = require("./Config/Db").mongoURI;
 
 mongoose
-  .connect(db, { usedNewUrlParser: true, useUnifiedTopology: true })
+  .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 app.get("/", (req, res) => res.send("Hello ike"));
 app.use(passport.initialize());
 require("./Config/passport")(passport);
 app.use("/api/users", users);
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`server running on port ${port}`));
 

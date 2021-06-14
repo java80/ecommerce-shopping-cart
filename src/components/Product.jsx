@@ -30,7 +30,7 @@ function Product(props) {
  }
   return (
     <>
-      <div className="card" style={{ width: "18rem" }}>
+      <div className="card-product" >
         <img className="card-img-top" src={product.imgurl1} alt="Card cap" />
         <div className="card-body">
           <Link to={`/product/${props.currentProduct.id}`}>

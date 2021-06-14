@@ -8,7 +8,7 @@ const CartItem = ({ item }) => {
   const handleIncement = () => {
     
     setSingleItemCounter(++singleItemCounter)
-    console.log("increment ", singleItemCounter);
+  //  console.log("increment ", singleItemCounter);
   }
   
   const handleDecrement = () => {

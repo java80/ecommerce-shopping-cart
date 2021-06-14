@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import { Route } from "react-router-dom";
 
 import { Container } from "react-bootstrap";
@@ -15,12 +15,22 @@ import "./App.css";
 import Basket from "./components/Basket/Basket";
 
 function App() {
+  var itemInlocalStorage = JSON.parse(localStorage.getItem("cartItems"));
+  itemInlocalStorage = itemInlocalStorage ? itemInlocalStorage : [];
   const [toggle, setToggle] = useState(false);
   const [JwtToken, setJwtToken] = useState(undefined);
   const [adminEmail, setAdminEmail] = useState(undefined);
-  const [cartItems, setCartItems] = useState([]);
-  let [cartItemCounter, setCartItemCounter] = useState(0)
+  const [cartItems, setCartItems] = useState(itemInlocalStorage);
+  // console.log("cart items",cartItems)
+  let [cartItemCounter, setCartItemCounter] = useState(0);
+  useEffect(() => {
+     localStorage.setItem("cartItems", JSON.stringify([...cartItems]));
+  },[cartItems])
+  
+ // console.log("From local storage", itemInlocalStorage)
+  
   const onAdd = (product) => {
+    console.log(product)
     const existing = cartItems.find((item) => item.id === product.id)
     if (existing) {
       setCartItems(
@@ -33,6 +43,7 @@ function App() {
     else {
       setCartItems([...cartItems, {...product, qty: 1}])
     }
+   
   }
 
   const onRemove = (product) => {
@@ -51,7 +62,7 @@ function App() {
       )
       )
       }
-
+     
   }
   return (
     <AppContext.Provider
@@ -65,14 +76,13 @@ function App() {
         cartItemCounter,
         setCartItemCounter,
         onAdd,
-        onRemove
+        onRemove,
       }}
     >
       <div className="container">
         <Navigation />
 
         <Route exact path="/">
-          
           <ProductList toggle={toggle} setToggle={setToggle} />
         </Route>
 
@@ -80,7 +90,7 @@ function App() {
           <Form toggle={toggle} setToggle={setToggle} />
           <ProductList toggle={toggle} setToggle={setToggle} />
         </Route>
-        
+
         <Route path="/product/:id">
           <Productdetails />
         </Route>

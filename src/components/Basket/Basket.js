@@ -6,7 +6,7 @@ const Basket = () => {
 
   const { cartItems} = useContext(AppContext);
   
-  console.log("cart items", cartItems)
+ // console.log("cart items", cartItems)
   const itemPrice = cartItems.reduce((a,c)=> a+c.qty*c.fields.price,0)
   const addToCart = (product) => {
     

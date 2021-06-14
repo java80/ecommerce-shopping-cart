@@ -29,7 +29,7 @@ const Signup = (props) => {
 
   const registerUser = (userData, history) => {
     axios
-      .post("http://localhost:3001/api/users/register", userData)
+      .post("http://localhost:5000/api/users/register", userData)
       .then((res) => {
         console.log(res);
         history.push("/login");

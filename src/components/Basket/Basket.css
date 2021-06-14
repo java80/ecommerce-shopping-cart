@@ -1,11 +1,13 @@
 .checkout{
   background-color: white;
-  margin-left: 20px;
-  border-style: solid;
-  height: 50vh;
-  width: 40vw;
-  align-items: center;
-  position: relative;
+    /* margin-left: 20px; */
+    border-style: solid;
+    height: 21rem;
+    width: 87vw;
+    align-items: center;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .cart-navbar {
   width: 100%;
@@ -74,3 +76,10 @@
 
   margin-right: 50px;
   }
+  @media screen and (max-width:700px){
+  .checkout{ 
+   width: 100%;
+   margin-bottom: 20px;
+  }
+  
+}

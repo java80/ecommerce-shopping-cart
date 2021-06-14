@@ -24,9 +24,10 @@ height: 200px;
 .product-name-price{
   margin: 103px 60px 0 60px;
 }
-.card{
-  width: auto;
+.card-product{
   padding:10px;
+  margin-bottom: 20px;
+  width: 18rem;
  
 }
 .product-small-images{
@@ -48,8 +49,8 @@ margin-right: 30px;
 
 
 @media screen and (max-width:700px){
-  .card{ 
-    width: 325px;
+  .card-product{ 
+  width: 100%;
   }
   
 }
