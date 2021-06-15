@@ -6,7 +6,7 @@ import "./Navigation.css";
 import { AppContext } from "../AppContext";
 
 function Navigation() {
-  const { JwtToken, adminEmail,cartItems } = useContext(AppContext);
+  const { JwtToken, adminEmail,cartItems,setJwtToken } = useContext(AppContext);
 
   return (
     // <nav className="navbar navbar-expand-lg navbar-light bg-light ">
@@ -14,7 +14,7 @@ function Navigation() {
     //     <li>
     //       <Link to="/" className="nav-item nav-link active">
     //         Home
-    //       </Link>{" "}
+    //       </Link>
     //     </li>
     //     <li>
     //       <Link to="/new" className="nav-item nav-link">
@@ -50,7 +50,7 @@ function Navigation() {
     //       </Link>
     //     </li>
     //     <li className="shopping-cart">
-    //       <img src="shop.png" alt="shoppingcart" width="50" height="50"></img>{" "}
+    //       <img src="shop.png" alt="shoppingcart" width="50" height="50"></img>
     //       <span className= "basket-counter">
     //         {cartItems.length}
     //       </span>
@@ -68,44 +68,61 @@ function Navigation() {
         /> */}
         <Link to="/" className="nav-item nav-link active">
           AShop
-        </Link>{" "}
+        </Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav
-          className="mr-auto"
-        
-        >
+        <Nav className="mr-auto">
           <Nav.Link>
-            {" "}
             <Link to="" className="nav-item nav-link">
-              Category{" "}
+              Category
             </Link>
           </Nav.Link>
           <Nav.Link>
-            {" "}
             <Link to="" className="nav-item nav-link">
-              Promotion{" "}
+              Promotion
             </Link>
           </Nav.Link>
 
           <Nav.Link>
-            {" "}
             <Link to="" className="nav-item nav-link">
-              New Releases{" "}
+              New Releases
             </Link>
           </Nav.Link>
+          {JwtToken && adminEmail === "ikeekedede@gmail.com" && (
+            <>
+            <Nav.Link>
+              <Link to="/new" className="nav-item nav-link">
+                Add Product
+              </Link>
+            </Nav.Link>
+              </>
+          )}
         </Nav>
         <Nav>
           <Nav.Link eventKey={2}>
-            <Link to="/Login" className="nav-item nav-link">
-              Login
-            </Link>
+            {JwtToken ? (
+              <Link
+                to="/Login"
+                className="nav-item nav-link"
+                onClick={() => setJwtToken("")}
+              >
+                Logout
+              </Link>
+            ) : (
+              <Link to="/Login" className="nav-item nav-link">
+                Login
+              </Link>
+            )}
           </Nav.Link>
           <Nav.Link eventKey={2}>
-            <Link to="/signup" className="nav-item nav-link">
-              Signup
-            </Link>
+            {JwtToken ? (
+              <> </>
+            ) : (
+              <Link to="/signup" className="nav-item nav-link">
+                Signup
+              </Link>
+            )}
           </Nav.Link>
           <Nav.Link eventKey={2}>
             <div className="shopping-cart">

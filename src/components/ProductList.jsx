@@ -1,4 +1,5 @@
 import { useState, useEffect, useContext } from "react";
+import ReactPaginate from "react-paginate";
 import axios from "axios";
 import { baseURL, config } from "../services";
 import Product from "./Product";
@@ -14,6 +15,11 @@ function ProductList(props) {
   let [products, setProducts] = useState([]);
   let [searchTerm, setSearchTerm] = useState("");
   let [filteredProducts, setFilteredProducts] = useState([]);
+  const [currentPage, setCurrentPage] = useState(0);
+  const perPage = 3;
+  const offSet = currentPage * perPage;
+
+  const pageCount = Math.ceil(products.length / perPage);
   useEffect(() => {
     getProduct();
   }, [props.toggle]);
@@ -56,7 +62,7 @@ function ProductList(props) {
             //   margin: "0 auto",
             //   marginBottom: "26px",
             // }}
-            className = "featured-product-card"
+            className="featured-product-card"
           >
             <Card.Header className="cardheader">
               {" "}

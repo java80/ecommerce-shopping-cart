@@ -21,7 +21,7 @@ function App() {
   const [JwtToken, setJwtToken] = useState(undefined);
   const [adminEmail, setAdminEmail] = useState(undefined);
   const [cartItems, setCartItems] = useState(itemInlocalStorage);
-  // console.log("cart items",cartItems)
+  console.log("Jwttoken",JwtToken)
   let [cartItemCounter, setCartItemCounter] = useState(0);
   useEffect(() => {
      localStorage.setItem("cartItems", JSON.stringify([...cartItems]));
