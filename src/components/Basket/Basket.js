@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import { AppContext } from "../../AppContext"
+import { Button } from "react-bootstrap";
 import "./Basket.css";
 import CartItem from "../CartItem/CartItem"
 const Basket = () => {
@@ -32,8 +33,14 @@ const Basket = () => {
         )}
         <div className="sub-total">
           <p className="total-items"> # of Items {cartItems.length}</p>
-          <p className="grand-total">subtotal ${itemPrice } </p>
+          <p className="grand-total">subtotal ${itemPrice} </p>
         </div>
+      </div>
+      <div className="payment">
+        <Button variant="outline-primary">Empty Cart</Button>{" "}
+        <Button variant="secondary" size="lg" active>
+         Checkout
+        </Button>
       </div>
     </div>
   );

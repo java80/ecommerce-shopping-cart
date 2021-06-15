@@ -1,6 +1,7 @@
 import { usestate, useContext, useState } from 'react';
 import { AppContext } from "../../AppContext";
 import Product from '../Product';
+import { Button } from 'react-bootstrap';
 const CartItem = ({ item }) => {
   let { cartItemCounter, setCartItemCounter,onAdd, onRemove } = useContext(AppContext);
   let [singleItemCounter, setSingleItemCounter] = useState(1)
@@ -32,15 +33,16 @@ const CartItem = ({ item }) => {
       </div>
       <p className="cart-unit-price"> {item.fields.price}</p>
       <div className="cart-product-quanity">
-        <div className="cart-product-increment" onClick={()=> onRemove(item)}>
+        <div className="cart-product-increment" onClick={() => onRemove(item)}>
           -
         </div>
         <div className="cart-product-counter">{item.qty}</div>
-        <div className="cart-product-decrement" onClick={()=> onAdd(item)}>
+        <div className="cart-product-decrement" onClick={() => onAdd(item)}>
           +
         </div>
       </div>
       <div className="cart-subtotal">{item.fields.price * item.qty}</div>
+
      
     </div>
   );

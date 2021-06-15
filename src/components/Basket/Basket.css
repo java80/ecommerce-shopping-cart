@@ -73,8 +73,11 @@
   }
 
   .grand-total {
-
   margin-right: 50px;
+  }
+  .payment{
+    display: flex;
+    justify-content: space-between;
   }
   @media screen and (max-width:700px){
   .checkout{ 
