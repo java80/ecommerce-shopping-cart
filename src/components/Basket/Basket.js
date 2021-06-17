@@ -5,10 +5,13 @@ import "./Basket.css";
 import CartItem from "../CartItem/CartItem"
 const Basket = () => {
 
-  const { cartItems} = useContext(AppContext);
+  const { cartItems,setCartItems} = useContext(AppContext);
   
  // console.log("cart items", cartItems)
-  const itemPrice = cartItems.reduce((a,c)=> a+c.qty*c.fields.price,0)
+  const itemPrice = cartItems.reduce((a, c) => a + c.qty * c.fields.price, 0)
+  const handleEmptyCart = () => {
+    setCartItems([]);
+  }
   const addToCart = (product) => {
     
 
@@ -37,7 +40,7 @@ const Basket = () => {
         </div>
       </div>
       <div className="payment">
-        <Button variant="outline-primary">Empty Cart</Button>{" "}
+        <Button variant="outline-primary" onClick = {handleEmptyCart}>Empty Cart</Button>{" "}
         <Button variant="secondary" size="lg" active>
          Checkout
         </Button>
