@@ -5,6 +5,7 @@ function Search(props) {
 
   function handleChange(event) {
     setSearchTerm(event.target.value);
+    console.log(event.target.value);
     setFilteredProducts(
         products.filter((product) =>
             product.fields.name

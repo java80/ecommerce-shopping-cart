@@ -5,9 +5,12 @@ import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { baseURL, config } from "../services";
 import axios from "axios"
+import { AppContext } from "../AppContext";
 import { Card} from 'react-bootstrap';
+import { useContext } from "react";
 
-function Productdetails() {
+function Productdetails(props) {
+  let { JwtToken, adminEmail, cartItems, setCartItems, onAdd, cartItemCounter, setCartItemCounter } = useContext(AppContext);
   let { id } = useParams();
   const [product, setProduct] = useState({})
   useEffect(() => {
@@ -41,7 +44,8 @@ function Productdetails() {
             <div>
               <h1>
                 {`$${product.fields.price} `}
-                <button className="btn btn-primary">Add to Cart</button>
+                <button className="btn btn-primary" onClick=
+                {()=> onAdd(props.currentProduct)}>Add to Cart</button>
               </h1>
             </div>
 

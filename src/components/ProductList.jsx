@@ -9,32 +9,47 @@ import { Container } from "react-bootstrap";
 import Search from "./Search";
 import "./Product.css";
 import Basket from "./Basket/Basket";
+import Pagination from "./Pagination";
 
 function ProductList(props) {
   const { JwtToken, adminEmail } = useContext(AppContext);
   let [products, setProducts] = useState([]);
   let [searchTerm, setSearchTerm] = useState("");
-  let [filteredProducts, setFilteredProducts] = useState([]);
-  const [currentPage, setCurrentPage] = useState(0);
-  const perPage = 3;
-  const offSet = currentPage * perPage;
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const pageCount = Math.ceil(products.length / perPage);
+  const [productPerPage] = useState(3);
+  const indexOfLastProduct = currentPage * productPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productPerPage;
+  const currentProducts = products.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct
+  );
+  console.log(currentProducts);
   useEffect(() => {
     getProduct();
-  }, [props.toggle]);
+  }, []);
 
+  let [filteredProducts, setFilteredProducts] = useState(
+    products.slice(indexOfFirstProduct, indexOfLastProduct)
+  );
   useEffect(() => {
     if (searchTerm === "" && products.length !== 0) {
-      setFilteredProducts(products);
+      setFilteredProducts(
+        products.slice(indexOfFirstProduct, indexOfLastProduct)
+      );
     }
-  }, [filteredProducts, searchTerm, products]);
+  }, [currentPage, searchTerm, products,indexOfFirstProduct,indexOfLastProduct]);
 
   async function getProduct() {
     let response = await axios.get(baseURL, config);
     setProducts(response.data.records);
     setFilteredProducts(response.data.records);
   }
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    console.log("current page", currentPage);
+    console.log("pagination click", pageNumber);
+  };
 
   return (
     <>
@@ -54,16 +69,7 @@ function ProductList(props) {
       )}
       <div className="container-fluid">
         <div className="feature-basket center">
-          <Card
-            border="info"
-            // style={{
-            //   width: "30rem",
-            //   height: "21rem",
-            //   margin: "0 auto",
-            //   marginBottom: "26px",
-            // }}
-            className="featured-product-card"
-          >
+          <Card border="info" className="featured-product-card">
             <Card.Header className="cardheader">
               {" "}
               <Card.Title className="text-center">
@@ -93,6 +99,11 @@ function ProductList(props) {
           />
         ))}
       </div>
+      <Pagination
+        productPerPage={productPerPage}
+        totalProducts={products.length}
+        paginate={paginate}
+      />
     </>
   );
 }

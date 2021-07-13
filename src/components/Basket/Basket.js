@@ -12,10 +12,6 @@ const Basket = () => {
   const handleEmptyCart = () => {
     setCartItems([]);
   }
-  const addToCart = (product) => {
-    
-
-  }
   return (
     <div className="checkout">
       <div className="cart-navbar">
