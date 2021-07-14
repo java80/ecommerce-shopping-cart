@@ -10,9 +10,11 @@ import { Card} from 'react-bootstrap';
 import { useContext } from "react";
 
 function Productdetails(props) {
-  let { JwtToken, adminEmail, cartItems, setCartItems, onAdd, cartItemCounter, setCartItemCounter } = useContext(AppContext);
+  console.log("Props", props);
+  let { onAdd } = useContext(AppContext);
   let { id } = useParams();
   const [product, setProduct] = useState({})
+  const [mainImage, setMainImage] = useState("");
   useEffect(() => {
     getProduct();
    // eslint-disable-next-line
@@ -21,11 +23,13 @@ function Productdetails(props) {
   async function getProduct() {
     let response = await axios.get(baseURL + "/" + id, config);
     setProduct(response.data);
+    setMainImage(response.data.fields.imgurl1);
+  }
+  
+  const handleOnclickMainImage = (img) => {
+    setMainImage(img);
 
   }
-  function changeBackground(e) {
-    e.target.style.display = "none"
-}
   return product.fields ? (
     <Card>
       <div>
@@ -34,7 +38,7 @@ function Productdetails(props) {
             <img
               classname="product-big-image"
               alt={product.fields.name}
-              src={product.fields.imgurl1}
+              src={mainImage}
             />
           </div>
           <div className="product-name-price">
@@ -44,8 +48,12 @@ function Productdetails(props) {
             <div>
               <h1>
                 {`$${product.fields.price} `}
-                <button className="btn btn-primary" onClick=
-                {()=> onAdd(props.currentProduct)}>Add to Cart</button>
+                <button
+                  className="btn btn-primary"
+                  onClick={() => onAdd(product)}
+                >
+                  Add to Cart
+                </button>
               </h1>
             </div>
 
@@ -66,23 +74,23 @@ function Productdetails(props) {
         <div className="hover-image">
           <div className="product-small-images">
             <img
-            
               alt={product.fields.name}
               src={product.fields.imgurl1}
+              onClick={() => handleOnclickMainImage(product.fields.imgurl1)}
             />
           </div>
           <div className="product-small-images">
             <img
-              onMouseOver={changeBackground}
               alt={product.fields.name}
               src={product.fields.imgurl2}
+              onClick={() => handleOnclickMainImage(product.fields.imgurl2)}
             />
           </div>
           <div className="product-small-images">
             <img
-              onMouseOver={changeBackground}
               alt={product.fields.name}
               src={product.fields.imgurl3}
+              onClick={() => handleOnclickMainImage(product.fields.imgurl3)}
             />
           </div>
         </div>
