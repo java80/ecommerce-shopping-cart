@@ -16,18 +16,19 @@ function Product(props) {
     await axios.delete(ProductUrl, config);
     props.setToggle((prevState) => !prevState);
   }
-  const updateCartItems = () => {
-    //console.log("cart click");
-    const cartItem = {
-      img: product.imgurl1,
-      name: product.name,
-      price: product.price,
+  // const updateCartItems = () => {
+  //   //console.log("cart click");
+  //   const cartItem = {
+  //     img: product.imgurl1,
+  //     name: product.name,
+  //     price: product.price,
       
-    }
-    const cartItemsArray = [...cartItems, cartItem]
-    setCartItemCounter(++cartItemCounter);
-    setCartItems(cartItemsArray)
- }
+  //   }
+  //   const cartItemsArray = [...cartItems, cartItem]
+  //   setCartItemCounter(++cartItemCounter);
+  //   setCartItems(cartItemsArray)
+  // }
+  
   return (
     <>
       <div className="card-product" >

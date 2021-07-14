@@ -54,3 +54,8 @@ background-color: blue;
 .navbar ul li a {
   text-decoration: none;
 }
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black !important;
+}
+

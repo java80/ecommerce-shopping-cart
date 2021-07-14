@@ -10,13 +10,15 @@ import Search from "./Search";
 import "./Product.css";
 import Basket from "./Basket/Basket";
 import Pagination from "./Pagination";
+import CarouselComponent from "./CarouselComponet";
 
 function ProductList(props) {
-  const { JwtToken, adminEmail } = useContext(AppContext);
+  const { JwtToken, adminEmail,cartItems,setCartItems } = useContext(AppContext);
+  console.log("cart length", cartItems.length);
   let [products, setProducts] = useState([]);
   let [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-
+  const [featuredProducts, setFeaturedProduct] = useState([]);
   const [productPerPage] = useState(3);
   const indexOfLastProduct = currentPage * productPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productPerPage;
@@ -33,10 +35,17 @@ function ProductList(props) {
     products.slice(indexOfFirstProduct, indexOfLastProduct)
   );
   useEffect(() => {
+
     if (searchTerm === "" && products.length !== 0) {
+
       setFilteredProducts(
         products.slice(indexOfFirstProduct, indexOfLastProduct)
       );
+      const newFeaturedProducts = products.filter((product, index) => {
+        return product.fields.featuredproduct === "true";
+      })
+      setFeaturedProduct(newFeaturedProducts)
+       
     }
   }, [currentPage, searchTerm, products,indexOfFirstProduct,indexOfLastProduct]);
 
@@ -69,27 +78,15 @@ function ProductList(props) {
       )}
       <div className="container-fluid">
         <div className="feature-basket center">
-          <Card border="info" className="featured-product-card">
-            <Card.Header className="cardheader">
-              {" "}
-              <Card.Title className="text-center">
-                Featured Product Image
-              </Card.Title>
-              <img
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  margin: "0 auto",
-                }}
-                src="https://sc04.alicdn.com/kf/H615aab5bb469448e82123029ab2665bfA.jpg"
-                alt=""
-              />
-            </Card.Header>
-          </Card>
-
-          <Basket />
+          
+          {
+            cartItems.length > 0 ? <Basket/> : <> </>
+            
+          
+          }
         </div>
       </div>
+      <CarouselComponent featuredProducts={ featuredProducts }/>
       <div className="products-container">
         {filteredProducts.map((product) => (
           <Product
