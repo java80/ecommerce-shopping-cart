@@ -21,8 +21,11 @@ function App() {
   const [JwtToken, setJwtToken] = useState(undefined);
   const [adminEmail, setAdminEmail] = useState(undefined);
   const [cartItems, setCartItems] = useState(itemInlocalStorage);
+  const [showBasket, setShowBasket] = useState(false);
+  console.log("Toggle basket", showBasket);
   console.log("Jwttoken",JwtToken)
   let [cartItemCounter, setCartItemCounter] = useState(0);
+
   useEffect(() => {
      localStorage.setItem("cartItems", JSON.stringify([...cartItems]));
   },[cartItems])
@@ -77,6 +80,9 @@ function App() {
         setCartItemCounter,
         onAdd,
         onRemove,
+        showBasket,
+        setShowBasket
+
       }}
     >
       <div className="container">

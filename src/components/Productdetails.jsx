@@ -8,10 +8,11 @@ import axios from "axios"
 import { AppContext } from "../AppContext";
 import { Card} from 'react-bootstrap';
 import { useContext } from "react";
+import Basket from "./Basket/Basket";
 
 function Productdetails(props) {
   console.log("Props", props);
-  let { onAdd } = useContext(AppContext);
+  let { onAdd,showBasket } = useContext(AppContext);
   let { id } = useParams();
   const [product, setProduct] = useState({})
   const [mainImage, setMainImage] = useState("");
@@ -31,7 +32,9 @@ function Productdetails(props) {
 
   }
   return product.fields ? (
+
     <Card>
+      {showBasket && <Basket/>}
       <div>
         <div className="product-details">
           <div className="produt-main-image">

@@ -12,7 +12,8 @@
   text-align: center;
   line-height: 30px;
   font-size: 16px;
-  background:red;
+  background: white;
+    color: black;
   position: absolute;
     top: -16px;
     left: 9px;

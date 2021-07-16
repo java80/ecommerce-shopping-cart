@@ -32,13 +32,17 @@ const Basket = () => {
         )}
         <div className="sub-total">
           <p className="total-items"> # of Items {cartItems.length}</p>
-          <p className="grand-total">subtotal ${itemPrice} </p>
+          <p className="grand-total">
+            subtotal ${Number(itemPrice).toFixed(2)}{" "}
+          </p>
         </div>
       </div>
       <div className="payment">
-        <Button variant="outline-primary" onClick = {handleEmptyCart}>Empty Cart</Button>{" "}
+        <Button variant="outline-danger" onClick={handleEmptyCart}>
+          Empty Cart
+        </Button>{" "}
         <Button variant="secondary" size="lg" active>
-         Checkout
+          Checkout
         </Button>
       </div>
     </div>

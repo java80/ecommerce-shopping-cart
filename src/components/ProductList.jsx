@@ -13,7 +13,7 @@ import Pagination from "./Pagination";
 import CarouselComponent from "./CarouselComponet";
 
 function ProductList(props) {
-  const { JwtToken, adminEmail,cartItems,setCartItems } = useContext(AppContext);
+  const { JwtToken, adminEmail,cartItems,showBasket } = useContext(AppContext);
   console.log("cart length", cartItems.length);
   let [products, setProducts] = useState([]);
   let [searchTerm, setSearchTerm] = useState("");
@@ -80,7 +80,7 @@ function ProductList(props) {
         <div className="feature-basket center">
           
           {
-            cartItems.length > 0 ? <Basket/> : <> </>
+            showBasket && <Basket/> 
             
           
           }

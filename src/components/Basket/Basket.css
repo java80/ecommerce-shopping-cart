@@ -3,7 +3,7 @@
     /* margin-left: 20px; */
     border-style: solid;
     height: 21rem;
-    width: 87vw;
+    width: 100%;
     align-items: center;
     position: relative;
     overflow-y: scroll;
@@ -67,9 +67,16 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    background: #8c8181;
+    color: white;
+    font-size: 22px;
   }
   .total-items{
     margin-right: 70px;
+  }
+  .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+   padding: 0px;
+
   }
 
   .grand-total {

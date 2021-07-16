@@ -38,7 +38,7 @@ function Product(props) {
             <h5 className="card-title">{product.name}</h5>
           </Link>
           <p className="card-text">{product.description}</p>
-          <p className="card-text">{product.price}</p>
+          <p className="card-text">${product.price}</p>
           <a href="#" className="btn btn-primary mb-2" onClick={()=> onAdd(props.currentProduct)}>
             Add to cart
           </a>

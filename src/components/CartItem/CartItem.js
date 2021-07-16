@@ -31,7 +31,7 @@ const CartItem = ({ item }) => {
         />
         <p className="cart-unit-name"> {item.fields.name}</p>
       </div>
-      <p className="cart-unit-price"> {item.fields.price}</p>
+      <p className="cart-unit-price"> ${Number(item.fields.price).toFixed(2)}</p>
       <div className="cart-product-quanity">
         <div className="cart-product-increment" onClick={() => onRemove(item)}>
           -
@@ -41,9 +41,9 @@ const CartItem = ({ item }) => {
           +
         </div>
       </div>
-      <div className="cart-subtotal">{item.fields.price * item.qty}</div>
-
-     
+      <div className="cart-subtotal">
+        ${Number(item.fields.price * item.qty).toFixed(2)}
+      </div>
     </div>
   );
 
